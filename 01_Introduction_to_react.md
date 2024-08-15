@@ -1,4 +1,4 @@
-'''markdown
+markdown
 
 #Getting Started React
 
@@ -9,5 +9,3 @@
 <li><span>CSS</span></li>
 <li><span>JavaScript</span></li>
 </ul>
-
-'''
