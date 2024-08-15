@@ -1,4 +1,4 @@
-<h1 align="center">Getting Started React<h1>
+<h1 style="color:red; text-align:center;">Getting Started React</h1>
 
 <p>This section covers prerequisites to get started with React. You should have a good understanding of the following technologies:</p>
 
