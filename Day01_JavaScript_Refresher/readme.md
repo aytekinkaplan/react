@@ -12,4 +12,4 @@
 <p>The following sections show different ways of adding JavaScript code to your web page.</p>
 
 <p>Inline Script</p>
-<p>Create a project folder on your desktop or in any location, name it learningReact and create an index.html file in the project folder. Then paste the following code and open it in a browser, for example <a link="https://www.google.com/chrome/">Chrome.</a></p>
+<p>Create a project folder on your desktop or in any location, name it learningReact and create an index.html file in the project folder. Then paste the following code and open it in a browser, for example <a href="https://www.google.com/chrome/">Chrome</a>
