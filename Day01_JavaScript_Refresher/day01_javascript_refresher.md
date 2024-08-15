@@ -1009,23 +1009,105 @@ console.log(mixedDataTypes.length);
 ```
 
 6. Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
+
+   ```js
+   const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+   console.log(itCompanies);
+   ```
 7. Print the array using _console.log()_
+
+   ```js
+   console.log(itCompanies);
+   ```
 8. Print the number of companies in the array
+
+ ```js
+   console.log(itCompanies.length);
+ ```
 9. Print the first company, middle and last company
+
+   ```js
+   const firstCompany = itCompanies[0];
+   const middleCompany = itCompanies[Math.floor(itCompanies.length / 2 - 1)];
+   const lastCompany = itCompanies[itCompanies.length - 1];
+   console.log(firstCompany, middleCompany, lastCompany);
+   ```
 10. Print out each company
+
+   ```js
+   for (company of itCompanies) {
+    console.log(company);
+   }
+   ```
 11. Change each company name to uppercase one by one and print them out
+     ```js
+     console.log(itCompanies);
+    for (company of itCompanies) {
+    console.log(company.toUpperCase());
+     }
+     ```
+
 12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+
+  ```js
+      console.log(itCompanies);
+     for (company of itCompanies) {
+    console.log(company + " are big IT companies");
+  }
+   ```
 13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is _not found_
+
+  ```js
+    console.log(itCompanies.includes("Facebook"));
+   ```
 14. Filter out companies which have more than one 'o' without the filter method
+
+  ```js
+    console.log(itCompanies.filter(company => company.split("").filter(letter => letter === "o").length > 1));
+   ```
 15. Sort the array using _sort()_ method
+
+ ```js
+    console.log(itCompanies.sort());
+   ```
 16. Reverse the array using _reverse()_ method
+
+ ```js
+    console.log(itCompanies.reverse());
+   ```
 17. Slice out the first 3 companies from the array
+
+ ```js
+    console.log(itCompanies.slice(0, 3));
+   ```
 18. Slice out the last 3 companies from the array
+
+ ```js
+    console.log(itCompanies.slice(itCompanies.length - 3, itCompanies.length));
+   ```
 19. Slice out the middle IT company or companies from the array
+
+ ```js
+  console.log(itCompanies.slice(Math.floor(itCompanies.length / 2 - 1), Math.floor(itCompanies.length / 2 + 1)));
+   ```
 20. Remove the first IT company from the array
+
+ ```js
+  console.log(itCompanies.shift());
+   ```
 21. Remove the middle IT company or companies from the array
+ ```js
+  console.log(itCompanies.splice(Math.floor(itCompanies.length / 2 - 1), 1));
+   ```
 22. Remove the last IT company from the array
+
+ ```js
+  console.log(itCompanies.pop());
+   ```
 23. Remove all IT companies
+ ```js
+  console.log(itCompanies.splice(0, itCompanies.length));
+   ```
 
 ##### Exercise: Level 2
 
