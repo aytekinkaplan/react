@@ -1,1 +1,1 @@
-<h1>Getting Started React<h1>
+<h1 align="center">Getting Started React<h1>
