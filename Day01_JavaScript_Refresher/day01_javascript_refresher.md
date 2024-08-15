@@ -1011,118 +1011,221 @@ console.log(mixedDataTypes.length);
 6. Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
 
    ```js
-   const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+   const itCompanies = [
+     "Facebook",
+     "Google",
+     "Microsoft",
+     "Apple",
+     "IBM",
+     "Oracle",
+     "Amazon",
+   ];
    console.log(itCompanies);
    ```
-7. Print the array using _console.log()_
 
+7. Print the array using _console.log()_
    ```js
    console.log(itCompanies);
    ```
 8. Print the number of companies in the array
 
- ```js
-   console.log(itCompanies.length);
- ```
+```js
+console.log(itCompanies.length);
+```
+
 9. Print the first company, middle and last company
 
-   ```js
-   const firstCompany = itCompanies[0];
-   const middleCompany = itCompanies[Math.floor(itCompanies.length / 2 - 1)];
-   const lastCompany = itCompanies[itCompanies.length - 1];
-   console.log(firstCompany, middleCompany, lastCompany);
-   ```
+```js
+const firstCompany = itCompanies[0];
+const middleCompany = itCompanies[Math.floor(itCompanies.length / 2 - 1)];
+const lastCompany = itCompanies[itCompanies.length - 1];
+console.log(firstCompany, middleCompany, lastCompany);
+```
+
 10. Print out each company
 
-   ```js
-   for (company of itCompanies) {
-    console.log(company);
-   }
-   ```
+```js
+for (company of itCompanies) {
+  console.log(company);
+}
+```
+
 11. Change each company name to uppercase one by one and print them out
-     ```js
-     console.log(itCompanies);
+
+    ```js
+    console.log(itCompanies);
     for (company of itCompanies) {
-    console.log(company.toUpperCase());
-     }
-     ```
+      console.log(company.toUpperCase());
+    }
+    ```
 
 12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
 
-  ```js
-      console.log(itCompanies);
-     for (company of itCompanies) {
-    console.log(company + " are big IT companies");
-  }
-   ```
+```js
+console.log(itCompanies);
+for (company of itCompanies) {
+  console.log(company + " are big IT companies");
+}
+```
+
 13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is _not found_
 
-  ```js
-    console.log(itCompanies.includes("Facebook"));
-   ```
+```js
+console.log(itCompanies.includes("Facebook"));
+```
+
 14. Filter out companies which have more than one 'o' without the filter method
 
-  ```js
-    console.log(itCompanies.filter(company => company.split("").filter(letter => letter === "o").length > 1));
-   ```
+```js
+console.log(
+  itCompanies.filter(
+    (company) => company.split("").filter((letter) => letter === "o").length > 1
+  )
+);
+```
+
 15. Sort the array using _sort()_ method
 
- ```js
-    console.log(itCompanies.sort());
-   ```
+```js
+console.log(itCompanies.sort());
+```
+
 16. Reverse the array using _reverse()_ method
 
- ```js
-    console.log(itCompanies.reverse());
-   ```
+```js
+console.log(itCompanies.reverse());
+```
+
 17. Slice out the first 3 companies from the array
 
- ```js
-    console.log(itCompanies.slice(0, 3));
-   ```
+```js
+console.log(itCompanies.slice(0, 3));
+```
+
 18. Slice out the last 3 companies from the array
 
- ```js
-    console.log(itCompanies.slice(itCompanies.length - 3, itCompanies.length));
-   ```
+```js
+console.log(itCompanies.slice(itCompanies.length - 3, itCompanies.length));
+```
+
 19. Slice out the middle IT company or companies from the array
 
- ```js
-  console.log(itCompanies.slice(Math.floor(itCompanies.length / 2 - 1), Math.floor(itCompanies.length / 2 + 1)));
-   ```
+```js
+console.log(
+  itCompanies.slice(
+    Math.floor(itCompanies.length / 2 - 1),
+    Math.floor(itCompanies.length / 2 + 1)
+  )
+);
+```
+
 20. Remove the first IT company from the array
 
- ```js
-  console.log(itCompanies.shift());
-   ```
+```js
+console.log(itCompanies.shift());
+```
+
 21. Remove the middle IT company or companies from the array
- ```js
-  console.log(itCompanies.splice(Math.floor(itCompanies.length / 2 - 1), 1));
-   ```
+
+```js
+console.log(itCompanies.splice(Math.floor(itCompanies.length / 2 - 1), 1));
+```
+
 22. Remove the last IT company from the array
 
- ```js
-  console.log(itCompanies.pop());
-   ```
+```js
+console.log(itCompanies.pop());
+```
+
 23. Remove all IT companies
- ```js
-  console.log(itCompanies.splice(0, itCompanies.length));
-   ```
+
+```js
+console.log(itCompanies.splice(0, itCompanies.length));
+```
 
 ##### Exercise: Level 2
 
 1. Create a separate countries.js file and store the countries array into this file, create a separate file web_techs.js and store the webTechs array into this file. Access both file in main.js file
+
+   ```js
+   // countries.js
+   const countries = ["Finland", "Sweden", "Denmark", "Norway", "Iceland"];
+   export default countries;
+
+   //web_techs.js
+   const techs = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Node",
+    "MongoDB",
+    "Python",
+    "D3.js",
+    "Git",
+    "GitHub",
+    "Express",
+    "Next.js",
+    "Sass",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Django",
+    "Flask",
+    "PostgreSQL",
+    "MySQL",
+    "GraphQL",
+    "Apollo",
+    "Apollo Server",
+    "Apollo Client",
+    "Java",
+    "C",
+    "C++",
+    "C#",
+   ];
+
+   export default techs;
+
+   //package.json used
+
+   {
+   "type": "module"
+   }
+
+   // main.js
+
+    import countries from "./countries.js";
+    import techs from "./techs.js";
+
+    console.log(countries);
+    console.log(techs);
+
+   ```
+
 1. First remove all the punctuations and change the string to array and count the number of words in the array
 
    ```js
    let text =
      "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
-   console.log(words);
-   console.log(words.length);
+   let removedPunctuations = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+   console.log(removedPunctuations);
+   let splittedText = removedPunctuations.split(" ");
+   console.log(splittedText);
+   let countedWords = splittedText.length;
+   console.log(countedWords);
    ```
 
    ```sh
-   ["I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", "JS", "React", "Python"]
+
+   I love teaching and empowering people I teach HTML CSS JS React Python
+   [
+   'I',          'love',
+   'teaching',   'and',
+   'empowering', 'people',
+   'I',          'teach',
+   'HTML',       'CSS',
+   'JS',         'React',
+   'Python'
+   ]
 
    13
    ```
@@ -1134,9 +1237,39 @@ console.log(mixedDataTypes.length);
    ```
 
    - add 'Meat' in the beginning of your shopping cart if it has not been already added
+
+   ```js
+   shoppingCart.unshift("Meat");
+   console.log(shoppingCart);
+   ```
+
+   ```sh
+   [ 'Meat', 'Milk', 'Coffee', 'Tea', 'Honey' ]
+   [ 'Meat', 'Milk', 'Coffee', 'Tea', 'Honey', 'Sugar' ]
+
+   ```
+
    - add Sugar at the end of you shopping cart if it has not been already added
+
+   ```js
+   shoppingCart.push("Sugar");
+   console.log(shoppingCart);
+   ```
+
    - remove 'Honey' if you are allergic to honey
+     ```js
+     shoppingCart.splice(4, 1);
+     console.log(shoppingCart);
+     ```
    - modify Tea to 'Green Tea'
+     ```js
+     shoppingCart[2] = "Green Tea";
+     console.log(shoppingCart);
+     ```
+
+   ```
+
+   ```
 
 1. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
 1. In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
@@ -1149,9 +1282,11 @@ console.log(mixedDataTypes.length);
    console.log(fullStack);
    ```
 
-   ```sh
-   ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
-   ```
+`````
+
+```sh
+["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+```
 
 ##### Exercise: Level 3
 
@@ -2172,7 +2307,7 @@ console.log(copyPerson.hasOwnProperty("score"));
      }
    }```
 
-   ````
+`````
 
 1. Find people who are MERN stack developer from the users object
 1. Set your name in the users object without modifying the original users object
@@ -4647,4 +4782,4 @@ Check out there result on [codepen](https://codepen.io/Asabeneh/full/vYGqQxP)
 
 🎉 CONGRATULATIONS ! 🎉
 
-[<< Day 0](../readMe.md) | [Day 2 >>](../02_Day_Introduction_to_React/02_introduction_to_react.md)
+<!-- [<< Day 0](../readMe.md) | [Day 2 >>](../02_Day_Introduction_to_React/02_introduction_to_react.md) -->
