@@ -4,10 +4,10 @@
 
 <p>JavaScript can be added to a web page in three different ways:</p>
 <ul>
-<li><span style="color:red">Inline script</span></li>
-<li><span style="color:red">Internal script</span></li>
-<li><span style="color:red">External script</span></li>
-<li><span style="color:red">Multiple External scripts</span></li>
+<li><span style="color:red;">Inline script</span></li>
+<li><span style="color:red;">Internal script</span></li>
+<li><span style="color:red;">External script</span></li>
+<li><span style="color:red;">Multiple External scripts</span></li>
 </ul>
 <p>The following sections show different ways of adding JavaScript code to your web page.</p>
 
