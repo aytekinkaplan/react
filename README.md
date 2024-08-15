@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
 
-<sub>Author: <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Aytekin Kaplan</a><br>
+<sub>Author: <a href="https://www.linkedin.com/in/aytekinkaplan/" target="_blank">Aytekin Kaplan</a><br>
 <small> August, 2024</small></sub>
 
 </div>
