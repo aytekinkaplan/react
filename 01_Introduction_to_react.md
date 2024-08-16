@@ -265,7 +265,7 @@ Let us render more content. To render more content, the JSX element should have 
 </body>
 </html>
 ```
-![rendering_jsx2.png](../images/rendering_jsx2.png)
+![rendering_jsx2.png](./images/rendering_jsx2.png)
 
 We have created a JSX element for the header of the website. How about the main and the footer for the website? Similar to the header, let us create a JSX element for the main and the footer.
 
