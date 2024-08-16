@@ -225,44 +225,43 @@ Let us render more content. To render more content, the JSX element should have 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>React Challenge</title>
-  </head>
+</head>
+<body>
+<div class="root"></div>
 
-  <body>
-    <div class="root"></div>
+<script
+        crossorigin
+        src="https://unpkg.com/react@16/umd/react.development.js"
+></script>
+<script
+        crossorigin
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // To get the root element from the HTML document
+    const rootElement = document.querySelector('.root');
 
-    <script
-      crossorigin
-      src="https://unpkg.com/react@16/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-    ></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel">
-      // To get the root element from the HTML document
-      const rootElement = document.querySelector('.root')
+    // Header element
+    const header = (
+            <header>
+                <h1>Welcome to React</h1>
+                <h2>Getting Started with React</h2>
+                <h3>JavaScript Library</h3>
+            </header>
+    );
 
-      // JSX element
-      const header = (
-        <header>
-          <h1>Welcome to React</h1>
-          <h2>Getting Started React</h2>
-          <h3>JavaScript Library</h3>
-          <p>Aytekin Kaplan</p>
-          <small>August 16, 2024</small>
-        </header>
-      )
-
-      // we render the JSX element using the ReactDOM package
-      // ReactDOM has the render method and the render method takes two arguments
-      ReactDOM.render(header, rootElement)
-    </script>
-  </body>
+    // Rendering the JSX element using the ReactDOM package
+    // ReactDOM's render method takes two arguments:
+    // 1. The JSX element to render
+    // 2. The DOM element where the JSX should be rendered
+    ReactDOM.render(header, rootElement);
+</script>
+</body>
 </html>
 ```
 
