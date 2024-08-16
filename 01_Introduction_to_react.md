@@ -271,3 +271,70 @@ We have created a JSX element for the header of the website. How about the main 
 
 JSX element for the main part of the website.
 
+```js
+// JSX element
+const main = (
+  <main>
+    <p>Prerequisite to get started react.js:</p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </main>
+)
+```
+
+JSX element for the footer part of the website.
+
+```js
+// JSX element
+const footer = (
+  <footer>
+    <p>Copyright 2020</p>
+  </footer>
+)
+```
+Now, we have three JSX elements: the header, main and footer. The best way to render all of the three JSX elements is by wrapping them all in a parent JSX element or putting them in an array. To include JSX element inside another JSX element we use the curly bracket, {} and call the name of the JSX inside the curly bracket.
+
+```js
+// JSX element for the header part of the website
+const header = (
+  <header>
+    <h1>Welcome to React</h1>
+    <h2>Getting Started React</h2>
+    <h3>JavaScript Library</h3>
+    <p>Aytekin Kaplan</p>
+    <small>August 17, 2024</small>
+  </header>
+)
+
+// JSX element for the main part of the website
+const main = (
+  <main>
+    <p>Prerequisite to get started react.js:</p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </main>
+)
+
+// JSX element for the footer part of the website
+const footer = (
+  <footer>
+    <p>Copyright 2020</p>
+  </footer>
+)
+
+// JSX element which contain all, it is a container or parent
+const app = (
+  <div>
+    {header}
+    {main}
+    {footer}
+  </div>
+)
+```
+Now, let us put everything together and render it to the browser. [Live on code pen](https://codepen.io/Aytekin-Kaplan/pen/QWXazQg).
