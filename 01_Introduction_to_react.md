@@ -233,7 +233,7 @@ Let us render more content. To render more content, the JSX element should have 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>30 Days Of React Challenge</title>
+    <title>React Challenge</title>
   </head>
 
   <body>
@@ -255,11 +255,11 @@ Let us render more content. To render more content, the JSX element should have 
       // JSX element
       const header = (
         <header>
-          <h1>Welcome to 30 Days Of React</h1>
+          <h1>Welcome to React</h1>
           <h2>Getting Started React</h2>
           <h3>JavaScript Library</h3>
-          <p>Asabeneh Yetayeh</p>
-          <small>Oct 2, 2020</small>
+          <p>Aytekin Kaplan</p>
+          <small>August 16, 2024</small>
         </header>
       )
 
