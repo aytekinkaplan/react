@@ -71,7 +71,7 @@ Let us add a subtitles and other contents to this JSX element by adding addition
 ```js
 const header = (
   <header>
-    <h1>Welcome to 30 Days Of React</h1>
+    <h1>Welcome to React</h1>
     <h2>Getting Started React</h2>
     <h3>JavaScript Library</h3>
   </header>
@@ -83,11 +83,11 @@ Let us keep adding more elements. Additional HTML elements to display the author
 ```js
 const header = (
   <header>
-    <h1>Welcome to 30 Days Of React</h1>
+    <h1>Welcome to React</h1>
     <h2>Getting Started React</h2>
     <h3>JavaScript Library</h3>
-    <p>Asabeneh Yetayeh</p>
-    <small>Oct 2, 2020</small>
+    <p>Aytekin Kaplan</p>
+    <small>August 16, 2024</small>
   </header>
 )
 ```
@@ -112,5 +112,50 @@ We comment codes for different reasons and it is also good to know how to commen
 */
 }
 ```
+
+#### Rendering a JSX Element
+
+To render a JSX element to HTML document, we should first create an index HTML. The index.html is the only HTML file you will have in any React Application. That is why we say that every React Application is a single page application. Let us create an index.html file. We can get started with React in two ways - either by using CDN or create-react-app. The create-react-app creates a React project boilerplate outbox and because of that, many people do have a hard time to understand how React works. In order to make things clear for absolute beginners I would like to start with a CDN. We use CDN only in this section and we will use the create-reap-app in the rest of the challenge and I also recommend you to use only create-react-app all the time.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Challenge</title>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script></script>
+  </body>
+</html>
+```
+
+As you can see from the above index.html, we have one div with a class root and script. The root _div_ is the gateway to connect all react components to the index.html. In the script tag we will write our JavaScript, but the script _type_ will be _babel_. Babel will _transpile_ the react JSX to pure JavaScript on the browser. Let us add babel to the script. Inside the babel, we can write any pure JavaScript, JSX and in general any React code.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Challenge</title>
+  </head>
+
+  <body>
+    <div class="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // our code goes here
+    </script>
+  </body>
+</html>
+```
+
+The babel library is linked to our document and now we can make use of it. The next step is importing _React_ and _ReactDOM_ using CDN or link. In order to link React and ReactDOM, we attach both packages from CDN to the body of index.html. To test if React is linked to the index.html, try to check it by doing console.log(React). Open the browser console and you should get an object. If you see an object containing React methods then you managed to link your project with React CDN and you are ready to use React.
+
 
 
