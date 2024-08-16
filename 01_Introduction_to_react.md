@@ -405,9 +405,17 @@ Now, let us put everything together and render it to the browser. [Live on code 
     // We render the JSX element using the ReactDOM package
     // ReactDOM has the render method and the render method takes two arguments
     ReactDOM.render(app, rootElement);
+    // or
+    // ReactDOM.render([header, main, footer], rootElement)
 </script>
 </body>
 </html>
 ```
+![Rendering JSX](./images/rendering_jsx3.png)
 
+Let us apply some style to our JSX elements and see the result.
+
+![Rendering JSX](./images/rendering_jsx4.png)
+
+Now, lets us apply style the header part only [Live on code pen](https://codepen.io/Aytekin-Kaplan/pen/vYqpvzO).
 
