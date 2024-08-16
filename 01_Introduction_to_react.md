@@ -219,7 +219,7 @@ Now, you knew JSX and JSX element. Let us render the JSX element on the browser,
   </body>
 </html>
 ```
-![Rendering JSX](..imagesrendering_jsx.png)
+![Rendering JSX](./images/rendering_jsx.png)
 
 Let us render more content. To render more content, the JSX element should have more HTML elements. For instance, we can create a header of a website and header may have a title, subtitle, author or date etc. Remember, we can render only one JSX element at a time.
 
