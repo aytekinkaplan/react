@@ -100,7 +100,7 @@ We comment codes for different reasons and it is also good to know how to commen
     <h1>Welcome to 30 Days Of React</h1>
     <h2>Getting Started React</h2>
     <h3>JavaScript Library</h3>
-    <p>Asabeneh Yetayeh</p>
+    <p>Aytekin Kaplan</p>
     <small>Oct 2, 2020</small>
   </header>
 
