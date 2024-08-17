@@ -565,3 +565,5 @@ Now, you know how to use the inline style and how to use className. Let us style
   </body>
 </html>
 ```
+
+![Styling all JSX elements](../images/rendering_jsx5)
