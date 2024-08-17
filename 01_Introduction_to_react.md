@@ -1236,5 +1236,5 @@ In the following code example, the list is now containing list elements and it i
 
 Rendering lists
 
-![List Id](../images/rendering_jsx8.png)
+![List Id](./images/rendering_jsx8.png)
 As you can see above, now the lists are formatted properly, but there is a warning on the console, which says each list child should have a unique key. In the array, we do not have id, but it is common to pass id as a unique value, when you have id in your data. Now, let us just pass each item with a unique key to remove the warning.
