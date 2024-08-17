@@ -15,7 +15,6 @@ Once in a while you may need different dummy data to work with React.
 
 React is a JavaScript library for building a reusable user interface(UI). It was initially released on May 29, 2013. The current version is 16.13.1 and somehow it is stable. React was created by Facebook. React makes creating UI components very easy. The official React documentation can be found [here](https://reactjs.org/docs/getting-started.html). When we work with React we do not interact directly with the DOM. React has its own way to handle the DOM(Document Object Model) manipulation. React uses its virtual DOM to make new changes and it updates only the element, that needs changing. Do not directly interact with DOM when you build a React Application and leave the DOM manipulation job for the React virtual DOM. In this challenge, we will develop 10-15 web applications using React. A web application, or a website, is made of buttons, links, forms with different input fields, header, footer, sections, articles, texts, images, audios, videos and boxes with different shapes. We use react to make a reusable UI components of a website.
 
-
 ### 2. Why React?
 
 React is one of the most popular JavaScript libraries. Many developers and companies have been using it for the last couple of years. Its popularity has been growing fast and it has a huge community. How do we measure popularity? One measure of popularity could be GitHub repository stars, watchers and forks. Let us compare the popularity of [React](https://github.com/facebook/react) and [Vue](https://github.com/vuejs/vue). As of today, the popularity between the two most popular JavaScript looks like as shown on the diagram. From the diagram, you can speculate the most popular JavaScript library. You may look at the number of watchers, stars and forks for both React and Vue. These alone will not be a very good measure of popularity, but still it tells a little bit about the popularity of the two technologies. If I have to recommend another JavaScript library next to React, it would be Vue.js.
@@ -38,9 +37,9 @@ JSX stands for JavaScript XML. JSX allows us to write HTML elements with JavaScr
 // JSX syntax
 // we don't need to use quotes with JSX
 
-const jsxElement = <h1>I am a JSX element</h1>
-const welcome = <h1>Welcome to React Challenge</h1>
-const data = <small>Oct 2, 2020</small>
+const jsxElement = <h1>I am a JSX element</h1>;
+const welcome = <h1>Welcome to React Challenge</h1>;
+const data = <small>Oct 2, 2020</small>;
 ```
 
 The above strange looking code seems like JavaScript and it seems like , but it is not JavaScript and it seems like HTML but not completely an HTML element. It is a mix of JavaScript and an HTML elements. JSX can allow us to use HTML in JavaScript. The HTML element in the JSX above is _h1_ and _small_.
@@ -52,13 +51,13 @@ As you have seen in the example above, JSX has a JavaScript and HTML like syntax
 This JSX element has only one HTML element which is _h1_.
 
 ```js
-const jsxElement = <h1>I am a JSX element</h1> // JS with HTML
+const jsxElement = <h1>I am a JSX element</h1>; // JS with HTML
 ```
 
 Let's make more JSX elements by declaring a new variable named title and content inside _h2_.
 
 ```js
-const title = <h2>Getting Started React</h2>
+const title = <h2>Getting Started React</h2>;
 ```
 
 Let us add a subtitles and other contents to this JSX element by adding additional HTML elements. Every HTML element should be wrapped by an outer HTML element to create a valid JSX element. The name title variable also should be changed to header because our JSX element is containing almost all of the header of the application.
@@ -70,7 +69,7 @@ const header = (
     <h2>Getting Started React</h2>
     <h3>JavaScript Library</h3>
   </header>
-)
+);
 ```
 
 Let us keep adding more elements. Additional HTML elements to display the author name and year.
@@ -84,7 +83,7 @@ const header = (
     <p>Aytekin Kaplan</p>
     <small>August 16, 2024</small>
   </header>
-)
+);
 ```
 
 As you can see the _header_ element is a parent element for all the inner HTML elements and JSX must be wrapped by an outer parent element. Without the _header_ HTML element or other parent HTML element the above JSX is invalid.
@@ -174,7 +173,7 @@ The babel library is linked to our document and now we can make use of it. The n
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-      console.log(React)
+      console.log(React);
     </script>
   </body>
 </html>
@@ -207,18 +206,19 @@ Now, you knew JSX and JSX element. Let us render the JSX element on the browser,
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       // To get the root element from the HTML document
-      const rootElement = document.querySelector('.root')
+      const rootElement = document.querySelector(".root");
 
       // JSX element
-      const jsxElement = <h1>I am a JSX element</h1>
+      const jsxElement = <h1>I am a JSX element</h1>;
 
       // we render the JSX element using the ReactDOM package
       // ReactDOM has the render method and the render method takes two arguments
-      ReactDOM.render(jsxElement, rootElement)
+      ReactDOM.render(jsxElement, rootElement);
     </script>
   </body>
 </html>
 ```
+
 ![Rendering JSX](./images/rendering_jsx1.png)
 
 Let us render more content. To render more content, the JSX element should have more HTML elements. For instance, we can create a header of a website and header may have a title, subtitle, author or date etc. Remember, we can render only one JSX element at a time.
@@ -226,45 +226,46 @@ Let us render more content. To render more content, the JSX element should have 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Challenge</title>
-</head>
-<body>
-<div class="root"></div>
+  </head>
+  <body>
+    <div class="root"></div>
 
-<script
-        crossorigin
-        src="https://unpkg.com/react@16/umd/react.development.js"
-></script>
-<script
-        crossorigin
-        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script type="text/babel">
-    // To get the root element from the HTML document
-    const rootElement = document.querySelector('.root');
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector(".root");
 
-    // Header element
-    const header = (
-            <header>
-                <h1>Welcome to React</h1>
-                <h2>Getting Started with React</h2>
-                <h3>JavaScript Library</h3>
-            </header>
-    );
+      // Header element
+      const header = (
+        <header>
+          <h1>Welcome to React</h1>
+          <h2>Getting Started with React</h2>
+          <h3>JavaScript Library</h3>
+        </header>
+      );
 
-    // Rendering the JSX element using the ReactDOM package
-    // ReactDOM's render method takes two arguments:
-    // 1. The JSX element to render
-    // 2. The DOM element where the JSX should be rendered
-    ReactDOM.render(header, rootElement);
-</script>
-</body>
+      // Rendering the JSX element using the ReactDOM package
+      // ReactDOM's render method takes two arguments:
+      // 1. The JSX element to render
+      // 2. The DOM element where the JSX should be rendered
+      ReactDOM.render(header, rootElement);
+    </script>
+  </body>
 </html>
 ```
+
 ![Rendering JSX](./images/rendering_jsx2.png)
 
 We have created a JSX element for the header of the website. How about the main and the footer for the website? Similar to the header, let us create a JSX element for the main and the footer.
@@ -282,7 +283,7 @@ const main = (
       <li>JavaScript</li>
     </ul>
   </main>
-)
+);
 ```
 
 JSX element for the footer part of the website.
@@ -293,8 +294,9 @@ const footer = (
   <footer>
     <p>Copyright 2020</p>
   </footer>
-)
+);
 ```
+
 Now, we have three JSX elements: the header, main and footer. The best way to render all of the three JSX elements is by wrapping them all in a parent JSX element or putting them in an array. To include JSX element inside another JSX element we use the curly bracket, {} and call the name of the JSX inside the curly bracket.
 
 ```js
@@ -307,7 +309,7 @@ const header = (
     <p>Aytekin Kaplan</p>
     <small>August 17, 2024</small>
   </header>
-)
+);
 
 // JSX element for the main part of the website
 const main = (
@@ -319,14 +321,14 @@ const main = (
       <li>JavaScript</li>
     </ul>
   </main>
-)
+);
 
 // JSX element for the footer part of the website
 const footer = (
   <footer>
     <p>Copyright 2020</p>
   </footer>
-)
+);
 
 // JSX element which contain all, it is a container or parent
 const app = (
@@ -335,82 +337,84 @@ const app = (
     {main}
     {footer}
   </div>
-)
+);
 ```
+
 Now, let us put everything together and render it to the browser. [Live on code pen](https://codepen.io/Aytekin-Kaplan/pen/QWXazQg).
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to React</title>
-</head>
-<body>
-<div class="root"></div>
+  </head>
+  <body>
+    <div class="root"></div>
 
-<script
-        crossorigin
-        src="https://unpkg.com/react@16/umd/react.development.js"
-></script>
-<script
-        crossorigin
-        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script type="text/babel">
-    // To get the root element from the HTML document
-    const rootElement = document.querySelector('.root');
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector(".root");
 
-    // JSX element, header
-    const header = (
-            <header>
-                <h1>Welcome to React</h1>
-                <h2>Getting Started with React</h2>
-                <h3>JavaScript Library</h3>
-                <p>Aytekin Kaplan</p>
-                <small>August 17, 2024</small>
-            </header>
-    );
+      // JSX element, header
+      const header = (
+        <header>
+          <h1>Welcome to React</h1>
+          <h2>Getting Started with React</h2>
+          <h3>JavaScript Library</h3>
+          <p>Aytekin Kaplan</p>
+          <small>August 17, 2024</small>
+        </header>
+      );
 
-    // JSX element, main
-    const main = (
-            <main>
-                <p>Prerequisite to get started with React.js:</p>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-            </main>
-    );
+      // JSX element, main
+      const main = (
+        <main>
+          <p>Prerequisite to get started with React.js:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </main>
+      );
 
-    // JSX element, footer
-    const footer = (
-            <footer>
-                <p>Copyright 2024</p>
-            </footer>
-    );
+      // JSX element, footer
+      const footer = (
+        <footer>
+          <p>Copyright 2024</p>
+        </footer>
+      );
 
-    // JSX element, app, a container or a parent
-    const app = (
-            <div>
-                {header}
-                {main}
-                {footer}
-            </div>
-    );
+      // JSX element, app, a container or a parent
+      const app = (
+        <div>
+          {header}
+          {main}
+          {footer}
+        </div>
+      );
 
-    // We render the JSX element using the ReactDOM package
-    // ReactDOM has the render method and the render method takes two arguments
-    ReactDOM.render(app, rootElement);
-    // or
-    // ReactDOM.render([header, main, footer], rootElement)
-</script>
-</body>
+      // We render the JSX element using the ReactDOM package
+      // ReactDOM has the render method and the render method takes two arguments
+      ReactDOM.render(app, rootElement);
+      // or
+      // ReactDOM.render([header, main, footer], rootElement)
+    </script>
+  </body>
 </html>
 ```
+
 ![Rendering JSX](./images/rendering_jsx3.png)
 
 Let us apply some style to our JSX elements and see the result.
@@ -419,3 +423,36 @@ Let us apply some style to our JSX elements and see the result.
 
 Now, lets us apply style the header part only [Live on code pen](https://codepen.io/Aytekin-Kaplan/pen/vYqpvzO).
 
+#### Style and className in JSX
+
+So far, we did not apply any style in the JSX elements. Now, let us add style to our JSX elements. Inline style became very popular after the emergence of react. Let us add border to the header JSX element.
+
+To add style to a JSX element we use inline style or className. We inject the style object using {}. Every CSS property becomes a key and every CSS property value becomes a value for the the object. For instance, in the example below, border is a key and '2px solid orange' is a value, color is a key and 'black' is a value, fontSize is a key and '18px' is a value. All two word CSS properties will change to camelCase when we use them as key in the CSS object in React or JavaScript.[Live on code pen](https://codepen.io/Aytekin-Kaplan/pen/zYVpgza).
+
+```js
+const header = (
+  <header
+    style={{ border: "2px solid orange", color: "black", fontSize: "18px" }}
+  >
+    <h1>Welcome to React</h1>
+    <h2>Getting Started React</h2>
+    <h3>JavaScript Library</h3>
+    <p>Aytekin Kaplan</p>
+    <small>August 17, 2024</small>
+  </header>
+);
+
+// or we can write it this way
+
+const style = { border: "2px solid orange", color: "black", fontSize: "18px" };
+
+const header = (
+  <header style={style}>
+    <h1>Welcome to React</h1>
+    <h2>Getting Started React</h2>
+    <h3>JavaScript Library</h3>
+    <p>Aytekin Kaplan</p>
+    <small>August 17, 2024</small>
+  </header>
+);
+```
