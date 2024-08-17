@@ -1022,3 +1022,5 @@ Now, let us put everything together. Here, in the example below, the data is inj
   </body>
 </html>
 ```
+
+![Rendering JSX](./images/rendering_jsx7.png)
