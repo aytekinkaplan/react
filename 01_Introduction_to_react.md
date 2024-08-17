@@ -456,3 +456,112 @@ const header = (
   </header>
 );
 ```
+
+It is good practice to open the browser console while you are developing your application to know, if everything goes well.
+
+Let us keep styling all the JSX elements we have created: the header, main and the footer. We can also use regular internal styling to style our application. Using regular style, to target an HTML element we use tag name, id, class, an attribute and other methods. It is very common in the React developer community - people use classes quite a lot instead of id. In this material, I will use only class instead of id.
+
+In JSX element we write className instead of class because class is a reserved word in JavaScript. Similar to className, htmlFor instead of for in label tag. See the example below.
+
+```js
+const title = <h1 className="title">Getting Started React</h1>;
+const inputField = (
+  <div>
+    <label htmlFor="firstname">First Name</label>
+    <input type="text" id="firstname" placeholder="First Name" />
+  </div>
+);
+```
+
+The id used in the input element is not for styling purpose, instead to refer the label to the input field.
+Now, you know how to use the inline style and how to use className. Let us style all the JSX elements.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+  </head>
+
+  <body>
+    <!-- class yerine className kullanılmalı -->
+    <div className="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector(".root");
+
+      // style
+      const headerStyles = {
+        backgroundColor: "#61DBFB",
+        fontFamily: "Helvetica Neue",
+        padding: 25,
+        lineHeight: 1.5,
+      };
+
+      // JSX element, header
+      const header = (
+        <header style={headerStyles}>
+          <div className="header-wrapper">
+            <h1>Welcome to 30 Days Of React</h1>
+            <h2>Getting Started React</h2>
+            <h3>JavaScript Library</h3>
+            <p>Asabeneh Yetayeh</p>
+            <small>Oct 2, 2020</small>
+          </div>
+        </header>
+      );
+
+      // JSX element, main
+      const mainStyles = {
+        backgroundColor: "#F3F0F5",
+        padding: "20px",
+      };
+      const main = (
+        <main style={mainStyles}>
+          <p>Prerequisite to get started with React.js:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </main>
+      );
+
+      const footerStyles = {
+        backgroundColor: "#61DBFB",
+        padding: "10px",
+      };
+      // JSX element, footer
+      const footer = (
+        <footer style={footerStyles}>
+          <p>Copyright 2020</p>
+        </footer>
+      );
+
+      // JSX element, app
+      const app = (
+        <div className="app">
+          {header}
+          {main}
+          {footer}
+        </div>
+      );
+
+      // we render the JSX element using the ReactDOM package
+      ReactDOM.render(app, rootElement);
+    </script>
+  </body>
+</html>
+```
