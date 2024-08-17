@@ -579,7 +579,6 @@ Instead of style object using regular styling method is more easy than the one a
       href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
       rel="stylesheet"
     />
-
     <title>React Challenge</title>
     <style>
       /* == General style === */
@@ -588,7 +587,6 @@ Instead of style object using regular styling method is more easy than the one a
         padding: 0;
         margin: 0;
       }
-
       html,
       body {
         height: 100%;
@@ -597,53 +595,43 @@ Instead of style object using regular styling method is more easy than the one a
         font-weight: 300;
         color: black;
       }
-
       .root {
         min-height: 100%;
         position: relative;
       }
-
       .header-wrapper,
       .main-wrapper,
       .footer-wrapper {
         width: 85%;
         margin: auto;
       }
-
       .header-wrapper,
       .main-wrapper {
         padding: 10px;
         margin: 2px auto;
       }
-
       h1 {
         font-size: 70px;
         font-weight: 300;
       }
-
       h2,
       h3 {
         font-weight: 300;
       }
-
       header {
         background-color: #61dbfb;
         padding: 10px; /* Duplicate padding removed */
       }
-
       main {
         padding: 10px;
         padding-bottom: 60px; /* Footer yüksekliği */
       }
-
       ul {
         margin-left: 15px;
       }
-
       ul li {
         list-style: none;
       }
-
       footer {
         position: absolute;
         bottom: 0;
@@ -651,7 +639,6 @@ Instead of style object using regular styling method is more easy than the one a
         height: 60px; /* Footer yüksekliği */
         background: #6cf;
       }
-
       .footer-wrapper {
         font-weight: 400;
         text-align: center;
@@ -659,10 +646,8 @@ Instead of style object using regular styling method is more easy than the one a
       }
     </style>
   </head>
-
   <body>
-    <div className="root"></div>
-
+    <div class="root"></div>
     <script
       crossorigin
       src="https://unpkg.com/react@16/umd/react.development.js"
@@ -675,7 +660,6 @@ Instead of style object using regular styling method is more easy than the one a
     <script type="text/babel">
       // To get the root element from the HTML document
       const rootElement = document.querySelector(".root");
-
       // JSX element, header
       const header = (
         <header>
@@ -688,7 +672,6 @@ Instead of style object using regular styling method is more easy than the one a
           </div>
         </header>
       );
-
       // JSX element, main
       const main = (
         <main>
@@ -708,7 +691,6 @@ Instead of style object using regular styling method is more easy than the one a
           </div>
         </main>
       );
-
       // JSX element, footer
       const footer = (
         <footer>
@@ -717,7 +699,6 @@ Instead of style object using regular styling method is more easy than the one a
           </div>
         </footer>
       );
-
       // JSX element, app
       const app = (
         <div className="app">
@@ -726,7 +707,6 @@ Instead of style object using regular styling method is more easy than the one a
           {footer}
         </div>
       );
-
       // we render the JSX element using the ReactDOM package
       ReactDOM.render(app, rootElement);
     </script>
