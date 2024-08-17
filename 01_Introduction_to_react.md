@@ -486,8 +486,8 @@ Now, you know how to use the inline style and how to use className. Let us style
   </head>
 
   <body>
-    <!-- class yerine className kullanılmalı -->
-    <div className="root"></div>
+    <!-- className yerine class kullanılmalı -->
+    <div class="root"></div>
 
     <script
       crossorigin
