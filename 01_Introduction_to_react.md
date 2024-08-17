@@ -482,7 +482,7 @@ Now, you know how to use the inline style and how to use className. Let us style
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>30 Days Of React Challenge</title>
+    <title>React Challenge</title>
   </head>
 
   <body>
@@ -517,8 +517,8 @@ Now, you know how to use the inline style and how to use className. Let us style
             <h1>Welcome to 30 Days Of React</h1>
             <h2>Getting Started React</h2>
             <h3>JavaScript Library</h3>
-            <p>Asabeneh Yetayeh</p>
-            <small>Oct 2, 2020</small>
+            <p>Aytekin Kaplan</p>
+            <small>August 17, 2024</small>
           </div>
         </header>
       );
@@ -546,7 +546,7 @@ Now, you know how to use the inline style and how to use className. Let us style
       // JSX element, footer
       const footer = (
         <footer style={footerStyles}>
-          <p>Copyright 2020</p>
+          <p>Copyright 2024</p>
         </footer>
       );
 
