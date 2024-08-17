@@ -1024,3 +1024,217 @@ Now, let us put everything together. Here, in the example below, the data is inj
 ```
 
 ![Rendering JSX](./images/rendering_jsx7.png)
+
+As you can see the lists are all in one line. Therefore, we should format the list the way we want, before we inject it to JSX. In order to format the list, we should modify the array before we will inject it to JSX. We can modify the array using _map_. As a react developer you should have a very good understanding of functional programming(map, filter, reduce, find, some, every).
+
+```js
+const techs = ["HTML", "CSS", "JavaScript"];
+const techsFormatted = techs.map((tech) => <li>{tech}</li>);
+```
+
+In the following code example, the list is now containing list elements and it is formatted properly.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>React Challenge</title>
+    <style>
+      /* == General style === */
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        line-height: 1.5;
+        font-family: "Montserrat";
+        font-weight: 300;
+        color: black;
+      }
+
+      .root {
+        min-height: 100%;
+        position: relative;
+      }
+
+      .header-wrapper,
+      .main-wrapper,
+      .footer-wrapper {
+        width: 85%;
+        margin: auto;
+      }
+
+      .header-wrapper,
+      .main-wrapper {
+        padding: 10px;
+        margin: 2px auto;
+      }
+
+      h1 {
+        font-size: 70px;
+        font-weight: 300;
+      }
+
+      h2,
+      h3 {
+        font-weight: 300;
+      }
+
+      header {
+        background-color: #61dbfb;
+        padding: 10px;
+      }
+
+      main {
+        padding: 10px 10px 60px;
+        /* Height of the footer */
+      }
+
+      ul {
+        margin-left: 15px;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        /* Height of the footer */
+        background: #6cf;
+      }
+
+      .footer-wrapper {
+        font-weight: 400;
+        text-align: center;
+        line-height: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector(".root");
+      // JSX element, header
+      const welcome = "Welcome to React Challenge";
+      const title = "Getting Started React";
+      const subtitle = "JavaScript Library";
+      const author = {
+        firstName: "Aytekin",
+        lastName: "Kaplan",
+      };
+      const date = "August 17, 2024";
+
+      // JSX element, header
+      const header = (
+        <header>
+          <div className="header-wrapper">
+            <h1>{welcome}</h1>
+            <h2>{title}</h2>
+            <h3>{subtitle}</h3>
+            <p>
+              Instructor: {author.firstName} {author.lastName}
+            </p>
+            <small>Date: {date}</small>
+          </div>
+        </header>
+      );
+
+      const numOne = 3;
+      const numTwo = 2;
+
+      const result = (
+        <p>
+          {numOne} + {numTwo} = {numOne + numTwo}
+        </p>
+      );
+
+      const yearBorn = 571;
+      const currentYear = new Date().getFullYear();
+      const age = currentYear - yearBorn;
+      const personAge = (
+        <p>
+          {" "}
+          {author.firstName} {author.lastName} is {age} years old
+        </p>
+      );
+
+      // JSX element, main
+      const techs = ["HTML", "CSS", "JavaScript"];
+      const techsFormatted = techs.map((tech) => <li>{tech}</li>);
+
+      // JSX element, main
+      const main = (
+        <main>
+          <div className="main-wrapper">
+            <p>
+              Prerequisite to get started{" "}
+              <strong>
+                <em>react.js</em>
+              </strong>
+              :
+            </p>
+            <ul>{techsFormatted}</ul>
+            {result}
+            {personAge}
+          </div>
+        </main>
+      );
+
+      const copyRight = "Copyright 2024";
+
+      // JSX element, footer
+      const footer = (
+        <footer>
+          <div className="footer-wrapper">
+            <p>{copyRight}</p>
+          </div>
+        </footer>
+      );
+
+      // JSX element, app
+      const app = (
+        <div className="app">
+          {header}
+          {main}
+          {footer}
+        </div>
+      );
+
+      // we render the JSX element using the ReactDOM package
+      ReactDOM.render(app, rootElement);
+    </script>
+  </body>
+</html>
+```
+
+Rendering lists
+
+![List Id](../images/rendering_jsx8.png)
+As you can see above, now the lists are formatted properly, but there is a warning on the console, which says each list child should have a unique key. In the array, we do not have id, but it is common to pass id as a unique value, when you have id in your data. Now, let us just pass each item with a unique key to remove the warning.
