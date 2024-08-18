@@ -84,14 +84,14 @@ We will use Google Chrome
 To create a react project you can use one of the following ways. Let's assume you installed node. Open the command line interface (CLI), git bash or terminal on Mac or Linux. Then run the following command. I am using git bash.
 
 ```sh
-ytknkpln@aytekin MINGW64 ~/WebstormProjects/react
+ytknkpln@aytekin MINGW64 ~/Desktop/my_first_project (main)
 $ npx create-react-app name-of-your-project
 ```
 
 If you don't want to use `npx` every time you create a project, you can install the _create-react-app_ package globally on your computer with the following command.
 
 ```sh
-ytknkpln@aytekin MINGW64 ~/WebstormProjects/react
+ytknkpln@aytekin MINGW64 ~/Desktop/my_first_project (main)
 $ npm install -g create-react-app
 ```
 
@@ -148,3 +148,58 @@ Before cleaning, the structure of boilerplate
 After cleaning up unnecessary files, the structure of the boilerplate is simplified, focusing on the files needed for immediate development.
 ![React Boilerplate](./images/react_bolier_plate_cleaned.png)
 Next, you'll work with `index.js`, where you import `React` and `ReactDOM`. React allows you to write JSX, while `ReactDOM` renders it to the DOM using the `render` method, which takes a JSX element or component and attaches it to the root.
+
+Here's the corrected and summarized version:
+
+First, we should import `React` and `ReactDOM` into `index.js`. React allows us to write JSX, while `ReactDOM` is used to render that JSX into the DOM. The `ReactDOM.render` method takes two parameters: a JSX element or component, and the root element where it should be rendered. Let's apply all the JSX elements we created in the first chapter.
+
+```js
+//index.js
+// importing the react and react-dom package
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const jsxElement = <h1>This is a JSX element</h1>;
+const rootElement = document.getElementById("root");
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(jsxElement);
+```
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+If your application is not running, go to your project folder and run the following command
+
+```sh
+ytknkpln@aytekin MINGW64 ~/Desktop/my_first_project (main)
+\$ npm start
+```
+
+If your code is bug-free, your React app will launch in the browser. 
+
+![JSX using create react app](./images/jsx_use_create_react_app.png)
+
+You can then write more JSX elements and render them. For example, you can create a JSX element using an `h2` HTML tag and display it in the browser.
