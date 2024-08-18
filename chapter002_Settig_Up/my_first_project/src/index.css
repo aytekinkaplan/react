@@ -1,43 +1,112 @@
-/* General styles for the body element to set default font and remove margins */
+/* index.css */
+
+/* Global Styles */
 body {
-  margin: 0; /* Remove default margin */
-  font-family: "Helvetica Neue", sans-serif; /* Set font for the whole document */
-  color: #333; /* Set default text color */
-  background-color: #f3f0f5; /* Set default background color */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Styles for the header section */
+/* Container for the whole app */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
 .header {
-  background-color: #61dbfb; /* Light blue background color */
-  padding: 25px; /* Padding around the content */
-  line-height: 1.5; /* Line height for better readability */
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Styles for the main content section */
+.header-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header h1,
+.header h2,
+.header h3 {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.header p {
+  margin: 10px 0;
+}
+
+.header s {
+  color: #999;
+}
+
+/* Main Content Styles */
 .main {
-  font-family: "Helvetica Neue", sans-serif; /* Font style for the main content */
-  padding: 25px; /* Padding around the content */
-  line-height: 1.5; /* Line height for readability */
-  font-size: 18px; /* Font size for text */
-  color: #333; /* Dark gray text color */
-  background-color: #f3f0f5; /* Light gray background color */
-  display: flex; /* Flexbox layout */
-  flex-direction: column; /* Column direction for flex items */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  min-height: 100vh; /* Minimum height of the viewport */
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Styles for the footer section */
+.main-wrapper {
+  text-align: center;
+}
+
+.main p {
+  margin: 20px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f4f4f4;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* User Image Styles */
+.user img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+/* Footer Styles */
 .footer {
-  background-color: #61dbfb; /* Light blue background color */
-  padding: 25px; /* Padding around the content */
-  line-height: 1.5; /* Line height for readability */
-  color: #333; /* Dark gray text color */
-  font-size: 18px; /* Font size for text */
-  display: flex; /* Flexbox layout */
-  flex-direction: column; /* Column direction for flex items */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  min-height: 100vh; /* Minimum height of the viewport */
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .header h1,
+  .header h2,
+  .header h3 {
+    font-size: 1.5rem;
+  }
+
+  .main p {
+    font-size: 0.9rem;
+  }
 }

@@ -4,6 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // Import CSS styles (assuming you have an index.css file)
 import "./index.css";
+import aytekinImage from "./images/aytekin.jpg";
 
 // Define constants for text content used in the header
 const welcome = "Welcome to React";
@@ -91,7 +92,7 @@ const techsFormatted = techs.map((tech, index) => <li key={index}>{tech}</li>);
 // Create a JSX element for the user image
 const user = (
   <div>
-    <img src="/images/aytekin.jpg" alt="Aytekin" />
+    <img src={aytekinImage} alt="Aytekin Kaplan" />
   </div>
 );
 
