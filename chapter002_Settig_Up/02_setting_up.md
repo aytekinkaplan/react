@@ -381,3 +381,122 @@ const app = (
 // The root element is the main container in the HTML file where React components are rendered.
 ReactDOM.render(app, document.getElementById("root"));
 ```
+
+![JSX using create react app to render more jsx](./images/rendering_multiple_jsx_elements_create-react_app.png)
+
+## Styles in JSX
+
+Let's apply style to the JSX elements. We can style JSX either using inline, internal or external CSS styles. Now, let's apply inline styles to each JSX element.
+
+```js
+// Import the React library, which is required for creating React components and using JSX syntax.
+import React from "react";
+
+// Import the ReactDOM library, which allows us to interact with the DOM and render React components into the actual web page.
+import ReactDOM from "react-dom/client";
+
+// Define styles for the header using a JavaScript object. These styles will be applied directly to the header element.
+const headerStyles = {
+  backgroundColor: "#61DBFB", // Sets the background color of the header.
+  fontFamily: "Helvetica Neue", // Defines the font family used in the header.
+  padding: 25, // Adds padding inside the header.
+  lineHeight: 1.5, // Sets the line height for text in the header.
+};
+
+// Create a JSX element named 'header' that represents the header section of the page.
+// Apply the defined styles to this header using the 'style' attribute.
+const header = (
+        <header style={headerStyles}>
+          <div className="header-wrapper">
+            <h1>Welcome to React</h1> // Main title of the header.
+            <h2>Getting started with React</h2> // Subtitle of the header.
+            <h3>JavaScript Library</h3> // Further explanation of React as a JavaScript library.
+            <p>React is a JavaScript library for building user interfaces.</p> // Paragraph describing what React is.
+            <p>React is used to build single-page applications.</p> // Paragraph explaining one of the use cases of React.
+            <p>React is used to build mobile applications.</p> // Paragraph explaining another use case of React.
+            <p>React is used to build web applications.</p> // Paragraph explaining React's use in web apps.
+            <p>React is used to build desktop applications.</p> // Paragraph explaining React's use in desktop apps.
+            <p>React is used to build server applications.</p> // Paragraph explaining React's use in server-side applications.
+            <p>React is used to build cloud applications.</p> // Paragraph explaining React's use in cloud apps.
+            <p>React is used to build native applications.</p> // Paragraph explaining React's use in native apps (e.g., React Native).
+            <p>React is used to build hybrid applications.</p> // Paragraph explaining React's use in hybrid applications.
+            <p>React is used to build enterprise applications.</p> // Paragraph explaining React's use in enterprise-grade applications.
+            <p>React is used to build real-time applications.</p> // Paragraph explaining React's use in real-time apps.
+            <p>React is used to build web applications.</p> // Repeats that React is used for web applications.
+            <p>Aytekin Kaplan</p> // Displays the author's name.
+            <small>Copyright 2024</small> // Displays copyright information in a smaller font.
+          </div>
+        </header>
+);
+
+// Define styles for the main section using a JavaScript object. These styles will be applied directly to the main element.
+const mainStyles = {
+  fontFamily: "Helvetica Neue", // Sets the font family for the main section.
+  padding: 25, // Adds padding inside the main section.
+  lineHeight: 1.5, // Sets the line height for text in the main section.
+  fontSize: 18, // Sets the font size in the main section.
+  color: "#333", // Defines the text color in the main section.
+  backgroundColor: "#F3F0F5", // Sets the background color of the main section.
+  display: "flex", // Uses flexbox layout for the main section.
+  flexDirection: "column", // Arranges child elements in a column direction.
+  alignItems: "center", // Centers child elements horizontally.
+  justifyContent: "center", // Centers child elements vertically.
+  minHeight: "100vh", // Ensures the main section takes at least the full viewport height.
+};
+
+// Create a JSX element named 'main' that represents the main section of the page.
+// Apply the defined styles to this main element using the 'style' attribute.
+const main = (
+        <main style={mainStyles}>
+          <p>Prerequisites for React:</p> // Paragraph introducing prerequisites for learning React.
+          <ul>
+            <li>HTML</li> // List item stating HTML is a prerequisite.
+            <li>CSS</li> // List item stating CSS is a prerequisite.
+            <li>JavaScript</li> // List item stating JavaScript is a prerequisite.
+          </ul>
+        </main>
+);
+
+// Define styles for the footer using a JavaScript object. These styles will be applied directly to the footer element.
+const footerStyles = {
+  backgroundColor: "#61DBFB", // Sets the background color of the footer.
+  fontFamily: "Helvetica Neue", // Defines the font family used in the footer.
+  padding: 25, // Adds padding inside the footer.
+  lineHeight: 1.5, // Sets the line height for text in the footer.
+  color: "#333", // Defines the text color in the footer.
+  fontSize: 18, // Sets the font size in the footer.
+  display: "flex", // Uses flexbox layout for the footer.
+  flexDirection: "column", // Arranges child elements in a column direction.
+  alignItems: "center", // Centers child elements horizontally.
+  justifyContent: "center", // Centers child elements vertically.
+  minHeight: "100vh", // Ensures the footer takes at least the full viewport height.
+};
+
+// Create a JSX element named 'footer' that represents the footer section of the page.
+// Apply the defined styles to this footer using the 'style' attribute.
+const footer = (
+        <footer style={footerStyles}>
+          <p>Thanks for reading</p> // Paragraph thanking the reader.
+          <p>Copyright 2024</p> // Paragraph displaying copyright information.
+          <p>Aytekin Kaplan</p> // Paragraph with the author's name.
+        </footer>
+);
+
+// Create a constant named 'app' that combines all the previously defined JSX elements (header, main, footer)
+// into a single container (a div element).
+const app = (
+        <div>
+          {header} // Inserts the header JSX element into the div.
+          {main} // Inserts the main JSX element into the div.
+          {footer} // Inserts the footer JSX element into the div.
+        </div>
+);
+
+// Create a root container to render the React component into the DOM.
+// Use ReactDOM.createRoot to create a root from the element with id "root".
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Render the 'app' JSX element (which includes header, main, and footer) into the root container.
+root.render(app);
+
+```
