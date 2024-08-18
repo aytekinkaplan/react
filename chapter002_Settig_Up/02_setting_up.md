@@ -203,3 +203,57 @@ If your code is bug-free, your React app will launch in the browser.
 ![JSX using create react app](./images/jsx_use_create_react_app.png)
 
 You can then write more JSX elements and render them. For example, you can create a JSX element using an `h2` HTML tag and display it in the browser.
+
+```js
+const title = <h2>Getting Started React</h2>;
+```
+Let's add more content to the previous JSX and change the name to header.
+
+```js
+const header = (
+  <header>
+    <h1>Welcome to React</h1>
+    <h2>Getting Started React</h2>
+    <h3>JavaScript Library</h3>
+  </header>
+);
+```
+
+Let's render this to the browser, in order to do so, we need ReactDOM.
+
+```js
+//index.js
+// importing the react and react-dom package
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const header = (
+        <header>
+          <h1> Welcome to React</h1>
+          <h2>Getting started React</h2>
+          <h3>JavaScript Library</h3>
+          <p>React is a JavaScript library for building user interfaces</p>
+          <p>React is used to build single-page applications</p>
+          <p>React is used to build mobile applications</p>
+          <p>React is used to build web applications</p>
+          <p>React is used to build desktop applications</p>
+          <p>React is used to build server applications</p>
+          <p>React is used to build cloud applications</p>
+          <p>React is used to build native applications</p>
+          <p>React is used to build hybrid applications</p>
+          <p>React is used to build enterprise applications</p>
+          <p>React is used to build real-time applications</p>
+          <p>React is used to build web applications</p>
+          <p>Aytekin Kaplan</p>
+          <small>Copyright 2024</small>
+        </header>
+);
+const rootElement = document.getElementById("root");
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(header);
+
+```
+
+![JSX using create react app](./images/rendering_more_jsx_content_create_react_app.png)
