@@ -146,5 +146,5 @@ Before cleaning, the structure of boilerplate
 ![React Boilerplate](./images/react_boilerplate.png)
 
 After cleaning up unnecessary files, the structure of the boilerplate is simplified, focusing on the files needed for immediate development.
-![React Boilerplate](./images/react_boilerplate.png)
+![React Boilerplate](./images/react_bolier_plate_cleaned.png)
 Next, you'll work with `index.js`, where you import `React` and `ReactDOM`. React allows you to write JSX, while `ReactDOM` renders it to the DOM using the `render` method, which takes a JSX element or component and attaches it to the root.
