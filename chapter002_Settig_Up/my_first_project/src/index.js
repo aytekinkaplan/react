@@ -1,20 +1,43 @@
+// Import React library, which is necessary for JSX
 import React from "react";
+// Import ReactDOM for rendering React elements to the DOM
 import ReactDOM from "react-dom/client";
-import "./index.css"; // Import the CSS file for styling
+// Import CSS styles (assuming you have an index.css file)
+import "./index.css";
 
 // Define constants for text content used in the header
-const welcome = "Welcome to React!";
-const gettingStarted = "Getting started with React";
-const jsLibrary = "JavaScript Library";
-
-// Define an object with personal information
-const personal_info = {
-  name: "Aytekin",
-  surname: "Kaplan",
-  age: Math.floor(Math.random() * 100), // Use a direct number instead of a string
+const welcome = "Welcome to React";
+const title = "Getting Started React";
+const subtitle = "JavaScript Library";
+const author = {
+  firstName: "Aytekin",
+  lastName: "Kaplan",
 };
 
-// Define an array of text content for the header, including a function to display personal info
+// Define calculation variables
+const numOne = 3;
+const numTwo = 2;
+
+// Create a JSX element to display a simple calculation
+const result = (
+  <p>
+    {numOne} + {numTwo} = {numOne + numTwo}
+  </p>
+);
+
+// Calculate age based on a birth year (Note: this is a static example)
+const yearBorn = 571;
+const currentYear = new Date().getFullYear();
+const age = currentYear - yearBorn;
+
+// Create a JSX element to display person's age
+const personAge = (
+  <p>
+    {author.firstName} {author.lastName} is {age} years old
+  </p>
+);
+
+// Define an array of text content for the header, including a function for dynamic content
 const p_texts_for_header = [
   "React is a JavaScript library for building user interfaces.",
   "React is used to build single-page applications.",
@@ -28,88 +51,93 @@ const p_texts_for_header = [
   "React is used to build enterprise applications.",
   "React is used to build real-time applications.",
   "React is used to build web applications.",
-  (info) => `I am ${info.name} ${info.surname} and I am ${info.age} years old.`,
+  (info) =>
+    `I am ${info.firstName} ${info.lastName} and I am ${age} years old.`,
   "Copyright 2024",
 ];
 
-// Define the text for prerequisites section
-const prerequisites_text = "Prerequisites for React:";
-const prerequisites = ["HTML", "CSS", "JavaScript"];
-
-// Create a JSX element for the unordered list of prerequisites
-const ul = (
-  <ul>
-    {prerequisites.map((item, index) => (
-      <li key={index}>{item}</li>
-    ))}
-  </ul>
-);
-
-// Define an array of text content for the footer
-const footerTexts = [
-  "Thanks for reading",
-  `Copyright ${new Date().getFullYear()}`, // Display the current year dynamically
-  "Aytekin Kaplan",
-];
-
-// Create a JSX element for the unordered list in the footer
-const footerUl = (
-  <ul>
-    {footerTexts.map((item, index) => (
-      <li key={index}>{item}</li>
-    ))}
-  </ul>
-);
-
-// Create a JSX element for the header section with dynamic content
+// Create a JSX element for the header
 const header = (
-  <header className="header">
+  <header>
     <div className="header-wrapper">
       <h1>{welcome}</h1>
-      <h2>{gettingStarted}</h2>
-      <h3>{jsLibrary}</h3>
-      {p_texts_for_header
-        .slice(0, -2) // Exclude the last two items which are handled separately
-        .map((text, index) =>
-          typeof text === "function" ? (
-            <p key={index}>{text(personal_info)}</p> // Call the function with personal_info
-          ) : (
-            <p key={index}>{text}</p>
-          )
-        )}
+      <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      {/* Map through the header texts, excluding the last two items */}
+      {p_texts_for_header.slice(0, -2).map((text, index) =>
+        typeof text === "function" ? (
+          <p key={index}>{text(author)}</p> // Call the function with author info if it's a function
+        ) : (
+          <p key={index}>{text}</p> // Otherwise, just render the text
+        )
+      )}
+      {/* Handle the second-to-last item separately */}
       <p>
         {typeof p_texts_for_header[p_texts_for_header.length - 2] === "function"
-          ? p_texts_for_header[p_texts_for_header.length - 2](personal_info) // Call the function for the second last item
+          ? p_texts_for_header[p_texts_for_header.length - 2](author)
           : p_texts_for_header[p_texts_for_header.length - 2]}
       </p>
-      <s>{p_texts_for_header[p_texts_for_header.length - 1]}</s>{" "}
-      {/* Strike-through text */}
+      {/* Render the last item with a strike-through */}
+      <s>{p_texts_for_header[p_texts_for_header.length - 1]}</s>
     </div>
   </header>
 );
 
-// Create a JSX element for the main content section
+// Define a list of technologies
+const techs = ["HTML", "CSS", "JavaScript"];
+// Create list items for each technology
+const techsFormatted = techs.map((tech, index) => <li key={index}>{tech}</li>);
+
+// Create a JSX element for the user image
+const user = (
+  <div>
+    <img src="/images/aytekin.jpg" alt="Aytekin" />
+  </div>
+);
+
+// Create a JSX element for the main content
 const main = (
-  <main className="main">
-    <p>{prerequisites_text}</p>
-    {ul}
+  <main>
+    <div className="main-wrapper">
+      <p>
+        Prerequisite to get started{" "}
+        <strong>
+          <em>react.js</em>
+        </strong>
+        :
+      </p>
+      <ul>{techsFormatted}</ul>
+      {result}
+      {personAge}
+      {user}
+    </div>
   </main>
 );
 
-// Create a JSX element for the footer section
-const footer = <footer className="footer">{footerUl}</footer>;
+// Define footer text
+const copyRight = "Copyright 2024";
 
-// Create a constant for the main app component that combines header, main, and footer
+// Create a JSX element for the footer
+const footer = (
+  <footer>
+    <div className="footer-wrapper">
+      <p>{copyRight}</p>
+    </div>
+  </footer>
+);
+
+// Combine header, main, and footer into a single app component
 const app = (
-  <div>
+  <div className="app">
     {header}
     {main}
     {footer}
   </div>
 );
 
-// Create a root container to render the React component into the DOM
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// Render the 'app' JSX element (which includes header, main, and footer) into the root container
+// Get the root element from the DOM
+const rootElement = document.getElementById("root");
+// Create a root using ReactDOM.createRoot (new method for React 18+)
+const root = ReactDOM.createRoot(rootElement);
+// Render the app to the DOM
 root.render(app);
