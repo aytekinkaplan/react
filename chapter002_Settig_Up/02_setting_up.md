@@ -98,13 +98,13 @@ $ npm install -g create-react-app
 After installing _create-react-app_, you can create a new React application by running the command `create-react-app name-of-project`. For example, to create a project named "30-days-of-react", navigate to your desired directory and run:
 
 ```sh
-$ npx create-react-app my-first-project
+$ npx create-react-app my_first_project
 ```
 
 After the project is created, navigate into the project directory:
 
 ```sh
-$ cd my-first-project
+$ cd my_first_project
 ```
 
 Then, start the development server:
@@ -142,6 +142,9 @@ When you create a new React project using _create-react-app_, it generates a boi
 - **README.md**: A markdown file for writing documentation.
 - **yarn.lock** or **package-lock.json**: Locks the package versions.
 
-After cleaning up unnecessary files, the structure of the boilerplate is simplified, focusing on the files needed for immediate development.
+Before cleaning, the structure of boilerplate
+![React Boilerplate](../images/react_boilerplate.png)
 
+After cleaning up unnecessary files, the structure of the boilerplate is simplified, focusing on the files needed for immediate development.
+![React Boilerplate](../images/react_boilerplate.png)
 Next, you'll work with `index.js`, where you import `React` and `ReactDOM`. React allows you to write JSX, while `ReactDOM` renders it to the DOM using the `render` method, which takes a JSX element or component and attaches it to the root.
