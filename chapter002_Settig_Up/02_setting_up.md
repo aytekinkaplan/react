@@ -53,3 +53,95 @@ export default (function doSomeMath() {
   };
 })();
 ```
+
+## Package
+
+A Package is a module or a collection of modules. For instance, React, ReactDOM are packages.
+
+## Node Package Manager(NPM)
+
+NPM was created in 2010 and is the default package manager for Node.js. You don't need to install NPM separately, as it comes bundled with Node.js. NPM allows users to consume and distribute JavaScript modules available in its registry. It also enables the creation, use, and distribution of packages. NPM has played a significant role in the growth of JavaScript, and there are currently over 350,000 packages in the NPM registry. The popularity of _create-react-app_ can be seen by the number of downloads it has on the NPM registry..
+
+## Visual Studio Code
+
+We will use Visual Studio Code as a code editor. [Download](https://code.visualstudio.com) and install it if you do not have one yet.
+
+## Visual Studio Extensions
+
+You may need to install these extensions from Visual Studio Code
+
+- Prettier
+- ESLint
+- Bracket Pair Colorizer
+- ES7 React/Redux/GraphQL/React-Native snippets
+
+## Browser
+
+We will use Google Chrome
+
+## Create React App
+
+To create a react project you can use one of the following ways. Let's assume you installed node. Open the command line interface (CLI), git bash or terminal on Mac or Linux. Then run the following command. I am using git bash.
+
+```sh
+ytknkpln@aytekin MINGW64 ~/WebstormProjects/react
+$ npx create-react-app name-of-your-project
+```
+
+If you don't want to use `npx` every time you create a project, you can install the _create-react-app_ package globally on your computer with the following command.
+
+```sh
+ytknkpln@aytekin MINGW64 ~/WebstormProjects/react
+$ npm install -g create-react-app
+```
+
+After installing _create-react-app_, you can create a new React application by running the command `create-react-app name-of-project`. For example, to create a project named "30-days-of-react", navigate to your desired directory and run:
+
+```sh
+$ npx create-react-app my-first-project
+```
+
+After the project is created, navigate into the project directory:
+
+```sh
+$ cd my-first-project
+```
+
+Then, start the development server:
+
+```sh
+$ npm start
+```
+
+Your React app will now be running at `localhost:3000`. You can modify the content in `App.js`, and the changes will automatically reflect in the browser. To stop the server, press `Ctrl + C` in the command line interface.
+
+Here's a summary of the React boilerplate created by _create-react-app_:
+
+When you create a new React project using _create-react-app_, it generates a boilerplate with several key folders and files:
+
+- **node_modules**: Contains all the necessary Node packages for the React application.
+
+- **public**:
+
+  - `index.html`: The only HTML file in the entire application.
+  - `favicon.ico`: An icon file.
+  - `manifest.json`: Used to make the application a Progressive Web App (PWA).
+  - Other images: Includes open graph images, which are visible when sharing a link on social media.
+  - `robots.txt`: Contains information about whether the website allows web scraping.
+
+- **src**:
+
+  - `App.css`, `index.css`: Different CSS files for styling.
+  - `index.js`: Connects all components to `index.html`.
+  - `App.js`: Where most presentational components are imported.
+  - `serviceWorker.js`: Adds PWA features.
+  - `setupTests.js`: Used for writing test cases.
+
+- **package.json**: Lists the packages used by the application.
+- **.gitignore**: Prevents certain files and folders from being pushed to GitHub.
+- **README.md**: A markdown file for writing documentation.
+- **yarn.lock** or **package-lock.json**: Locks the package versions.
+
+After cleaning up unnecessary files, the structure of the boilerplate is simplified, focusing on the files needed for immediate development.
+
+Next, you'll work with `index.js`, where you import `React` and `ReactDOM`. React allows you to write JSX, while `ReactDOM` renders it to the DOM using the `render` method, which takes a JSX element or component and attaches it to the root.
