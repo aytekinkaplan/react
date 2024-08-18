@@ -1,0 +1,43 @@
+/* General styles for the body element to set default font and remove margins */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: "Helvetica Neue", sans-serif; /* Set font for the whole document */
+  color: #333; /* Set default text color */
+  background-color: #f3f0f5; /* Set default background color */
+}
+
+/* Styles for the header section */
+.header {
+  background-color: #61dbfb; /* Light blue background color */
+  padding: 25px; /* Padding around the content */
+  line-height: 1.5; /* Line height for better readability */
+}
+
+/* Styles for the main content section */
+.main {
+  font-family: "Helvetica Neue", sans-serif; /* Font style for the main content */
+  padding: 25px; /* Padding around the content */
+  line-height: 1.5; /* Line height for readability */
+  font-size: 18px; /* Font size for text */
+  color: #333; /* Dark gray text color */
+  background-color: #f3f0f5; /* Light gray background color */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Column direction for flex items */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  min-height: 100vh; /* Minimum height of the viewport */
+}
+
+/* Styles for the footer section */
+.footer {
+  background-color: #61dbfb; /* Light blue background color */
+  padding: 25px; /* Padding around the content */
+  line-height: 1.5; /* Line height for readability */
+  color: #333; /* Dark gray text color */
+  font-size: 18px; /* Font size for text */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Column direction for flex items */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  min-height: 100vh; /* Minimum height of the viewport */
+}

@@ -504,3 +504,76 @@ root.render(app);
 ![Inline styling JSX](./images/styling_jsx_inline_create_react_app.png)
 
 Now, lets apply an internal style, we put all the CSS in the header of the index.html.
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles.css"; // Import the CSS file for styling
+
+// Create a JSX element named 'header' that represents the header section of the page.
+// Apply styles from the 'header' class defined in 'styles.css'.
+const header = (
+  <header className="header">
+    <div className="header-wrapper">
+      <h1>Welcome to React</h1>
+      <h2>Getting started with React</h2>
+      <h3>JavaScript Library</h3>
+      <p>React is a JavaScript library for building user interfaces.</p>
+      <p>React is used to build single-page applications.</p>
+      <p>React is used to build mobile applications.</p>
+      <p>React is used to build web applications.</p>
+      <p>React is used to build desktop applications.</p>
+      <p>React is used to build server applications.</p>
+      <p>React is used to build cloud applications.</p>
+      <p>React is used to build native applications.</p>
+      <p>React is used to build hybrid applications.</p>
+      <p>React is used to build enterprise applications.</p>
+      <p>React is used to build real-time applications.</p>
+      <p>React is used to build web applications.</p>
+      <p>Aytekin Kaplan</p>
+      <small>Copyright 2024</small>
+    </div>
+  </header>
+);
+
+// Create a JSX element named 'main' that represents the main section of the page.
+// Apply styles from the 'main' class defined in 'styles.css'.
+const main = (
+  <main className="main">
+    <p>Prerequisites for React:</p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </main>
+);
+
+// Create a JSX element named 'footer' that represents the footer section of the page.
+// Apply styles from the 'footer' class defined in 'styles.css'.
+const footer = (
+  <footer className="footer">
+    <p>Thanks for reading</p>
+    <p>Copyright 2024</p>
+    <p>Aytekin Kaplan</p>
+  </footer>
+);
+
+// Create a constant named 'app' that combines all the previously defined JSX elements (header, main, footer)
+// into a single container (a div element).
+const app = (
+  <div>
+    {header} // Inserts the header JSX element into the div.
+    {main} // Inserts the main JSX element into the div.
+    {footer} // Inserts the footer JSX element into the div.
+  </div>
+);
+
+// Create a root container to render the React component into the DOM.
+// Use ReactDOM.createRoot to create a root from the element with id "root".
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Render the 'app' JSX element (which includes header, main, and footer) into the root container.
+root.render(app);
+```
+
+![Inline styling JSX](./images/js_outer_style_create_react_app.png)

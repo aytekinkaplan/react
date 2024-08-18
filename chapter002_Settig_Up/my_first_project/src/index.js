@@ -1,15 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-const headerStyles = {
-  backgroundColor: "#61DBFB",
-  fontFamily: "Helvetica Neue",
-  padding: 25,
-  lineHeight: 1.5,
-};
+import "./index.css";
 
 const header = (
-  <header style={headerStyles}>
+  <header className="header">
     <div className="header-wrapper">
       <h1>Welcome to React</h1>
       <h2>Getting started with React</h2>
@@ -32,22 +26,8 @@ const header = (
   </header>
 );
 
-const mainStyles = {
-  fontFamily: "Helvetica Neue",
-  padding: 25,
-  lineHeight: 1.5,
-  fontSize: 18,
-  color: "#333",
-  backgroundColor: "#F3F0F5",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  minHeight: "100vh",
-};
-
 const main = (
-  <main style={mainStyles}>
+  <main className="main">
     <p>Prerequisites for React:</p>
     <ul>
       <li>HTML</li>
@@ -57,22 +37,8 @@ const main = (
   </main>
 );
 
-const footerStyles = {
-  backgroundColor: "#61DBFB",
-  fontFamily: "Helvetica Neue",
-  padding: 25,
-  lineHeight: 1.5,
-  color: "#333",
-  fontSize: 18,
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  minHeight: "100vh",
-};
-
 const footer = (
-  <footer style={footerStyles}>
+  <footer className="footer">
     <p>Thanks for reading</p>
     <p>Copyright 2024</p>
     <p>Aytekin Kaplan</p>
@@ -88,4 +54,5 @@ const app = (
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(app);
