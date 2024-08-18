@@ -500,3 +500,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(app);
 
 ```
+
+![Inline styling JSX](./images/styling_jsx_inline_create_react_app.png)
+
+Now, lets apply an internal style, we put all the CSS in the header of the index.html.
