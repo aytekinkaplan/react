@@ -386,7 +386,8 @@ ReactDOM.render(app, document.getElementById("root"));
 
 ## Styles in JSX
 
-Let's apply style to the JSX elements. We can style JSX either using inline, internal or external CSS styles. Now, let's apply inline styles to each JSX element.
+Let's apply style to the JSX elements. We can style JSX either using inline, internal or external CSS styles. Now, let's
+apply inline styles to each JSX element.
 
 ```js
 // Import the React library, which is required for creating React components and using JSX syntax.
@@ -397,99 +398,123 @@ import ReactDOM from "react-dom/client";
 
 // Define styles for the header using a JavaScript object. These styles will be applied directly to the header element.
 const headerStyles = {
-  backgroundColor: "#61DBFB", // Sets the background color of the header.
-  fontFamily: "Helvetica Neue", // Defines the font family used in the header.
-  padding: 25, // Adds padding inside the header.
-  lineHeight: 1.5, // Sets the line height for text in the header.
+    backgroundColor: "#61DBFB", // Sets the background color of the header.
+    fontFamily: "Helvetica Neue", // Defines the font family used in the header.
+    padding: 25, // Adds padding inside the header.
+    lineHeight: 1.5, // Sets the line height for text in the header.
 };
 
 // Create a JSX element named 'header' that represents the header section of the page.
 // Apply the defined styles to this header using the 'style' attribute.
 const header = (
-        <header style={headerStyles}>
-          <div className="header-wrapper">
-            <h1>Welcome to React</h1> // Main title of the header.
-            <h2>Getting started with React</h2> // Subtitle of the header.
-            <h3>JavaScript Library</h3> // Further explanation of React as a JavaScript library.
-            <p>React is a JavaScript library for building user interfaces.</p> // Paragraph describing what React is.
-            <p>React is used to build single-page applications.</p> // Paragraph explaining one of the use cases of React.
-            <p>React is used to build mobile applications.</p> // Paragraph explaining another use case of React.
-            <p>React is used to build web applications.</p> // Paragraph explaining React's use in web apps.
-            <p>React is used to build desktop applications.</p> // Paragraph explaining React's use in desktop apps.
-            <p>React is used to build server applications.</p> // Paragraph explaining React's use in server-side applications.
-            <p>React is used to build cloud applications.</p> // Paragraph explaining React's use in cloud apps.
-            <p>React is used to build native applications.</p> // Paragraph explaining React's use in native apps (e.g., React Native).
-            <p>React is used to build hybrid applications.</p> // Paragraph explaining React's use in hybrid applications.
-            <p>React is used to build enterprise applications.</p> // Paragraph explaining React's use in enterprise-grade applications.
-            <p>React is used to build real-time applications.</p> // Paragraph explaining React's use in real-time apps.
-            <p>React is used to build web applications.</p> // Repeats that React is used for web applications.
-            <p>Aytekin Kaplan</p> // Displays the author's name.
-            <small>Copyright 2024</small> // Displays copyright information in a smaller font.
-          </div>
-        </header>
+    <header style={headerStyles}>
+        <div className="header-wrapper">
+            <h1>Welcome to React</h1>
+            // Main title of the header.
+            <h2>Getting started with React</h2>
+            // Subtitle of the header.
+            <h3>JavaScript Library</h3>
+            // Further explanation of React as a JavaScript library.
+            <p>React is a JavaScript library for building user interfaces.</p>
+            // Paragraph describing what React is.
+            <p>React is used to build single-page applications.</p>
+            // Paragraph explaining one of the use cases of React.
+            <p>React is used to build mobile applications.</p>
+            // Paragraph explaining another use case of React.
+            <p>React is used to build web applications.</p>
+            // Paragraph explaining React's use in web apps.
+            <p>React is used to build desktop applications.</p>
+            // Paragraph explaining React's use in desktop apps.
+            <p>React is used to build server applications.</p>
+            // Paragraph explaining React's use in server-side applications.
+            <p>React is used to build cloud applications.</p>
+            // Paragraph explaining React's use in cloud apps.
+            <p>React is used to build native applications.</p>
+            // Paragraph explaining React's use in native apps (e.g., React Native).
+            <p>React is used to build hybrid applications.</p>
+            // Paragraph explaining React's use in hybrid applications.
+            <p>React is used to build enterprise applications.</p>
+            // Paragraph explaining React's use in enterprise-grade applications.
+            <p>React is used to build real-time applications.</p>
+            // Paragraph explaining React's use in real-time apps.
+            <p>React is used to build web applications.</p>
+            // Repeats that React is used for web applications.
+            <p>Aytekin Kaplan</p>
+            // Displays the author's name.
+            <small>Copyright 2024</small>
+            // Displays copyright information in a smaller font.
+        </div>
+    </header>
 );
 
 // Define styles for the main section using a JavaScript object. These styles will be applied directly to the main element.
 const mainStyles = {
-  fontFamily: "Helvetica Neue", // Sets the font family for the main section.
-  padding: 25, // Adds padding inside the main section.
-  lineHeight: 1.5, // Sets the line height for text in the main section.
-  fontSize: 18, // Sets the font size in the main section.
-  color: "#333", // Defines the text color in the main section.
-  backgroundColor: "#F3F0F5", // Sets the background color of the main section.
-  display: "flex", // Uses flexbox layout for the main section.
-  flexDirection: "column", // Arranges child elements in a column direction.
-  alignItems: "center", // Centers child elements horizontally.
-  justifyContent: "center", // Centers child elements vertically.
-  minHeight: "100vh", // Ensures the main section takes at least the full viewport height.
+    fontFamily: "Helvetica Neue", // Sets the font family for the main section.
+    padding: 25, // Adds padding inside the main section.
+    lineHeight: 1.5, // Sets the line height for text in the main section.
+    fontSize: 18, // Sets the font size in the main section.
+    color: "#333", // Defines the text color in the main section.
+    backgroundColor: "#F3F0F5", // Sets the background color of the main section.
+    display: "flex", // Uses flexbox layout for the main section.
+    flexDirection: "column", // Arranges child elements in a column direction.
+    alignItems: "center", // Centers child elements horizontally.
+    justifyContent: "center", // Centers child elements vertically.
+    minHeight: "100vh", // Ensures the main section takes at least the full viewport height.
 };
 
 // Create a JSX element named 'main' that represents the main section of the page.
 // Apply the defined styles to this main element using the 'style' attribute.
 const main = (
-        <main style={mainStyles}>
-          <p>Prerequisites for React:</p> // Paragraph introducing prerequisites for learning React.
-          <ul>
-            <li>HTML</li> // List item stating HTML is a prerequisite.
-            <li>CSS</li> // List item stating CSS is a prerequisite.
-            <li>JavaScript</li> // List item stating JavaScript is a prerequisite.
-          </ul>
-        </main>
+    <main style={mainStyles}>
+        <p>Prerequisites for React:</p>
+        // Paragraph introducing prerequisites for learning React.
+        <ul>
+            <li>HTML</li>
+            // List item stating HTML is a prerequisite.
+            <li>CSS</li>
+            // List item stating CSS is a prerequisite.
+            <li>JavaScript</li>
+            // List item stating JavaScript is a prerequisite.
+        </ul>
+    </main>
 );
 
 // Define styles for the footer using a JavaScript object. These styles will be applied directly to the footer element.
 const footerStyles = {
-  backgroundColor: "#61DBFB", // Sets the background color of the footer.
-  fontFamily: "Helvetica Neue", // Defines the font family used in the footer.
-  padding: 25, // Adds padding inside the footer.
-  lineHeight: 1.5, // Sets the line height for text in the footer.
-  color: "#333", // Defines the text color in the footer.
-  fontSize: 18, // Sets the font size in the footer.
-  display: "flex", // Uses flexbox layout for the footer.
-  flexDirection: "column", // Arranges child elements in a column direction.
-  alignItems: "center", // Centers child elements horizontally.
-  justifyContent: "center", // Centers child elements vertically.
-  minHeight: "100vh", // Ensures the footer takes at least the full viewport height.
+    backgroundColor: "#61DBFB", // Sets the background color of the footer.
+    fontFamily: "Helvetica Neue", // Defines the font family used in the footer.
+    padding: 25, // Adds padding inside the footer.
+    lineHeight: 1.5, // Sets the line height for text in the footer.
+    color: "#333", // Defines the text color in the footer.
+    fontSize: 18, // Sets the font size in the footer.
+    display: "flex", // Uses flexbox layout for the footer.
+    flexDirection: "column", // Arranges child elements in a column direction.
+    alignItems: "center", // Centers child elements horizontally.
+    justifyContent: "center", // Centers child elements vertically.
+    minHeight: "100vh", // Ensures the footer takes at least the full viewport height.
 };
 
 // Create a JSX element named 'footer' that represents the footer section of the page.
 // Apply the defined styles to this footer using the 'style' attribute.
 const footer = (
-        <footer style={footerStyles}>
-          <p>Thanks for reading</p> // Paragraph thanking the reader.
-          <p>Copyright 2024</p> // Paragraph displaying copyright information.
-          <p>Aytekin Kaplan</p> // Paragraph with the author's name.
-        </footer>
+    <footer style={footerStyles}>
+        <p>Thanks for reading</p>
+        // Paragraph thanking the reader.
+        <p>Copyright 2024</p>
+        // Paragraph displaying copyright information.
+        <p>Aytekin Kaplan</p>
+        // Paragraph with the author's name.
+    </footer>
 );
 
 // Create a constant named 'app' that combines all the previously defined JSX elements (header, main, footer)
 // into a single container (a div element).
 const app = (
-        <div>
-          {header} // Inserts the header JSX element into the div.
-          {main} // Inserts the main JSX element into the div.
-          {footer} // Inserts the footer JSX element into the div.
-        </div>
+    <div>
+        {header} // Inserts the header JSX element into the div.
+        {main} // Inserts the main JSX element into the div.
+        {footer} // Inserts the footer JSX element into the div.
+    </div>
 );
 
 // Create a root container to render the React component into the DOM.
@@ -504,6 +529,7 @@ root.render(app);
 ![Inline styling JSX](./images/styling_jsx_inline_create_react_app.png)
 
 Now, lets apply an internal style, we put all the CSS in the header of the index.html.
+
 ```js
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -512,60 +538,60 @@ import "./styles.css"; // Import the CSS file for styling
 // Create a JSX element named 'header' that represents the header section of the page.
 // Apply styles from the 'header' class defined in 'styles.css'.
 const header = (
-  <header className="header">
-    <div className="header-wrapper">
-      <h1>Welcome to React</h1>
-      <h2>Getting started with React</h2>
-      <h3>JavaScript Library</h3>
-      <p>React is a JavaScript library for building user interfaces.</p>
-      <p>React is used to build single-page applications.</p>
-      <p>React is used to build mobile applications.</p>
-      <p>React is used to build web applications.</p>
-      <p>React is used to build desktop applications.</p>
-      <p>React is used to build server applications.</p>
-      <p>React is used to build cloud applications.</p>
-      <p>React is used to build native applications.</p>
-      <p>React is used to build hybrid applications.</p>
-      <p>React is used to build enterprise applications.</p>
-      <p>React is used to build real-time applications.</p>
-      <p>React is used to build web applications.</p>
-      <p>Aytekin Kaplan</p>
-      <small>Copyright 2024</small>
-    </div>
-  </header>
+    <header className="header">
+        <div className="header-wrapper">
+            <h1>Welcome to React</h1>
+            <h2>Getting started with React</h2>
+            <h3>JavaScript Library</h3>
+            <p>React is a JavaScript library for building user interfaces.</p>
+            <p>React is used to build single-page applications.</p>
+            <p>React is used to build mobile applications.</p>
+            <p>React is used to build web applications.</p>
+            <p>React is used to build desktop applications.</p>
+            <p>React is used to build server applications.</p>
+            <p>React is used to build cloud applications.</p>
+            <p>React is used to build native applications.</p>
+            <p>React is used to build hybrid applications.</p>
+            <p>React is used to build enterprise applications.</p>
+            <p>React is used to build real-time applications.</p>
+            <p>React is used to build web applications.</p>
+            <p>Aytekin Kaplan</p>
+            <small>Copyright 2024</small>
+        </div>
+    </header>
 );
 
 // Create a JSX element named 'main' that represents the main section of the page.
 // Apply styles from the 'main' class defined in 'styles.css'.
 const main = (
-  <main className="main">
-    <p>Prerequisites for React:</p>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </main>
+    <main className="main">
+        <p>Prerequisites for React:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </main>
 );
 
 // Create a JSX element named 'footer' that represents the footer section of the page.
 // Apply styles from the 'footer' class defined in 'styles.css'.
 const footer = (
-  <footer className="footer">
-    <p>Thanks for reading</p>
-    <p>Copyright 2024</p>
-    <p>Aytekin Kaplan</p>
-  </footer>
+    <footer className="footer">
+        <p>Thanks for reading</p>
+        <p>Copyright 2024</p>
+        <p>Aytekin Kaplan</p>
+    </footer>
 );
 
 // Create a constant named 'app' that combines all the previously defined JSX elements (header, main, footer)
 // into a single container (a div element).
 const app = (
-  <div>
-    {header} // Inserts the header JSX element into the div.
-    {main} // Inserts the main JSX element into the div.
-    {footer} // Inserts the footer JSX element into the div.
-  </div>
+    <div>
+        {header} // Inserts the header JSX element into the div.
+        {main} // Inserts the main JSX element into the div.
+        {footer} // Inserts the footer JSX element into the div.
+    </div>
 );
 
 // Create a root container to render the React component into the DOM.
@@ -577,3 +603,126 @@ root.render(app);
 ```
 
 ![Inline styling JSX](./images/js_outer_style_create_react_app.png)
+
+## Injecting data to JSX elements
+
+```js
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css"; // Import the CSS file for styling
+
+// Define constants for text content used in the header
+const welcome = "Welcome to React!";
+const gettingStarted = "Getting started with React";
+const jsLibrary = "JavaScript Library";
+
+// Define an object with personal information
+const personal_info = {
+    name: "Aytekin",
+    surname: "Kaplan",
+    age: Math.floor(Math.random() * 100), // Use a direct number instead of a string
+};
+
+// Define an array of text content for the header, including a function to display personal info
+const p_texts_for_header = [
+    "React is a JavaScript library for building user interfaces.",
+    "React is used to build single-page applications.",
+    "React is used to build mobile applications.",
+    "React is used to build web applications.",
+    "React is used to build desktop applications.",
+    "React is used to build server applications.",
+    "React is used to build cloud applications.",
+    "React is used to build native applications.",
+    "React is used to build hybrid applications.",
+    "React is used to build enterprise applications.",
+    "React is used to build real-time applications.",
+    "React is used to build web applications.",
+    (info) => `I am ${info.name} ${info.surname} and I am ${info.age} years old.`,
+    "Copyright 2024",
+];
+
+// Define the text for prerequisites section
+const prerequisites_text = "Prerequisites for React:";
+const prerequisites = ["HTML", "CSS", "JavaScript"];
+
+// Create a JSX element for the unordered list of prerequisites
+const ul = (
+    <ul>
+        {prerequisites.map((item, index) => (
+            <li key={index}>{item}</li>
+        ))}
+    </ul>
+);
+
+// Define an array of text content for the footer
+const footerTexts = [
+    "Thanks for reading",
+    `Copyright ${new Date().getFullYear()}`, // Display the current year dynamically
+    "Aytekin Kaplan",
+];
+
+// Create a JSX element for the unordered list in the footer  
+const footerUl = (
+    <ul>
+        {footerTexts.map((item, index) => (
+            <li key={index}>{item}</li>
+        ))}
+    </ul>
+);
+
+// Create a JSX element for the header section with dynamic content
+const header = (
+    <header className="header">
+        <div className="header-wrapper">
+            <h1>{welcome}</h1>
+            <h2>{gettingStarted}</h2>
+            <h3>{jsLibrary}</h3>
+            {p_texts_for_header
+                .slice(0, -2) // Exclude the last two items which are handled separately
+                .map((text, index) =>
+                    typeof text === "function" ? (
+                        <p key={index}>{text(personal_info)}</p> // Call the function with personal_info
+                    ) : (
+                        <p key={index}>{text}</p>
+                    )
+                )}
+            <p>
+                {typeof p_texts_for_header[p_texts_for_header.length - 2] === "function"
+                    ? p_texts_for_header[p_texts_for_header.length - 2](personal_info) // Call the function for the second last item
+                    : p_texts_for_header[p_texts_for_header.length - 2]}
+            </p>
+            <s>{p_texts_for_header[p_texts_for_header.length - 1]}</s>
+            {" "}
+            {/* Strike-through text */}
+        </div>
+    </header>
+);
+
+// Create a JSX element for the main content section
+const main = (
+    <main className="main">
+        <p>{prerequisites_text}</p>
+        {ul}
+    </main>
+);
+
+// Create a JSX element for the footer section
+const footer = <footer className="footer">{footerUl}</footer>;
+
+// Create a constant for the main app component that combines header, main, and footer
+const app = (
+    <div>
+        {header}
+        {main}
+        {footer}
+    </div>
+);
+
+// Create a root container to render the React component into the DOM
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Render the 'app' JSX element (which includes header, main, and footer) into the root container
+root.render(app);
+
+```
