@@ -257,3 +257,73 @@ root.render(header);
 ```
 
 ![JSX using create react app](./images/rendering_more_jsx_content_create_react_app.png)
+```js
+Now, lets add all the JSX we created
+
+// Import the React library. React is necessary for writing JSX and creating React components.
+import React from "react";
+
+// Import the ReactDOM library, which is used to interact with the DOM (Document Object Model) and render React components into the actual web page.
+import ReactDOM from "react-dom/client";
+
+// Create a constant named 'header' that stores a JSX element.
+// This JSX element represents a header section that includes multiple headings and paragraphs.
+const header = (
+  <header> 
+    <h1>Welcome to React</h1>  // This is an h1 element used as the main title of the page.
+    <h2>Getting started with React</h2> // This is an h2 element, which serves as a subtitle.
+    <h3>JavaScript Library</h3> // This h3 element further explains that React is a JavaScript library.
+    <p>React is a JavaScript library for building user interfaces.</p> // Paragraph explaining what React is.
+    <p>React is used to build single-page applications.</p> // Describes one of the use cases of React.
+    <p>React is used to build mobile applications.</p> // Another use case: building mobile apps with React.
+    <p>React is used to build web applications.</p> // Use case for web applications.
+    <p>React is used to build desktop applications.</p> // Indicates that React can be used for desktop apps as well.
+    <p>React is used to build server applications.</p> // Mentions that React can also be applied in server-side apps.
+    <p>React is used to build cloud applications.</p> // Describes React’s capability in building cloud apps.
+    <p>React is used to build native applications.</p> // Highlights the ability to create native applications with React (e.g., React Native).
+    <p>React is used to build hybrid applications.</p> // Points out React’s use in hybrid applications.
+    <p>React is used to build enterprise applications.</p> // Notes that React can be used for building enterprise-grade applications.
+    <p>React is used to build real-time applications.</p> // Describes that React is useful for real-time applications.
+    <p>React is used to build web applications.</p> // Repeats that React is used for web applications.
+    <p>Aytekin Kaplan</p> // Displays the author's name.
+    <small>Copyright 2024</small> // A small element displaying copyright information.
+  </header>
+);
+
+// Create a constant named 'main' that stores another JSX element.
+// This JSX element represents the main section, which includes a paragraph and an unordered list.
+const main = (
+  <main> 
+    <p>Prerequisites for React</p> // A paragraph introducing the prerequisites for learning React.
+    <ul> 
+      <li>HTML</li> // A list item stating that knowledge of HTML is required.
+      <li>CSS</li> // A list item stating that knowledge of CSS is required.
+      <li>JavaScript</li> // A list item stating that knowledge of JavaScript is required.
+    </ul>
+  </main>
+);
+
+// Create a constant named 'footer' that stores a JSX element.
+// This JSX element represents a footer section that includes several paragraphs.
+const footer = (
+  <footer> 
+    <p>Thanks for reading</p> // A paragraph thanking the reader.
+    <p>Copyright 2024</p> // A paragraph displaying copyright information.
+    <p>Aytekin Kaplan</p> // A paragraph with the author's name.
+  </footer>
+);
+
+// Create a constant named 'app' that combines all the previously defined JSX elements (header, main, footer)
+// into a single container (a div element).
+const app = (
+  <div>
+    {header} // Inserts the header JSX element into the div.
+    {main} // Inserts the main JSX element into the div.
+    {footer} // Inserts the footer JSX element into the div.
+  </div>
+);
+
+// Render the 'app' JSX element (which contains header, main, and footer) into the root DOM element.
+// The root element is the main container in the HTML file where React components are rendered.
+ReactDOM.render(app, document.getElementById("root"));
+```
