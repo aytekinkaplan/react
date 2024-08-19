@@ -241,3 +241,8 @@ console.log(child.greet("John")); // Hello John, I am Aytekin Kaplan.
 
 ```
 
+updateTitle Method: Allows updating the title of the person and provides feedback on the change.
+greet Method: Provides a personalized greeting message.
+addSkills Method: Adds new skills to the existing list.
+removeSkill Method: Removes a specified skill from the list.
+
