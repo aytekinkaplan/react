@@ -774,3 +774,339 @@ render(<App />, document.querySelector('.root'));
 For a live example, you can see it on [CodePen](https://codepen.io/Aytekin-Kaplan/pen/VwJQzJw).
 
 By leveraging these concepts, you'll be able to build more modular, maintainable, and dynamic React applications.
+
+---
+
+In React, JSX elements and components are foundational to creating user interfaces. Understanding how to use and differentiate between them is essential for effective React development.
+
+### Transitioning from JSX Elements to Components
+
+#### **JSX Elements**
+
+JSX elements are the fundamental building blocks in React, representing static pieces of the user interface. They are directly defined within the JSX syntax and are used to create elements such as headers, paragraphs, and buttons.
+
+**Example of a JSX element:**
+
+```jsx
+// Define a JSX element for a header
+const headerElement = (
+  <header style={headerStyles}>
+    <div className='header-wrapper'>
+      <h1>Welcome to React</h1>        {/* Main heading */}
+      <h2>Getting Started with React</h2> {/* Subheading */}
+      <h3>JavaScript Library for Building User Interfaces</h3> {/* Smaller heading */}
+      <p>Aytekin Kaplan</p>         {/* Author name */}
+      <small>August 19, 2024</small> {/* Date */}
+    </div>
+  </header>
+);
+```
+
+#### **React Components**
+
+React components are more powerful than basic JSX elements. They encapsulate a piece of the user interface and can include logic, lifecycle methods, and state management. Components can be function components or class components, but function components are more common and recommended.
+
+To create a React component, define a JavaScript function or class that returns JSX. Components can be used as tags in JSX and accept attributes (props) to customize their behavior.
+
+**Converting a JSX element into a React component:**
+
+1. **Define the Component:**
+   Define a function or class that returns JSX. This encapsulates the JSX element within a reusable component.
+
+   ```jsx
+   // Function Component for Header
+   const Header = () => {
+     return (
+       <header style={headerStyles}>
+         <div className='header-wrapper'>
+           <h1>Welcome to React</h1>
+           <h2>Getting Started with React</h2>
+           <h3>JavaScript Library for Building User Interfaces</h3>
+           <p>Aytekin Kaplan</p>
+           <small>August 19, 2024</small>
+         </div>
+       </header>
+     );
+   };
+   ```
+
+2. **Using the Component:**
+   Use the component within JSX by referencing it with its name as a tag. This is similar to how HTML elements are used.
+
+   ```jsx
+   // Function Component for App
+   const App = () => {
+     return (
+       <div>
+         <Header /> {/* Render the Header component */}
+       </div>
+     );
+   };
+   ```
+
+3. **Passing Props:**
+   Components can accept attributes (props) that allow you to pass dynamic data and configure the component’s behavior. Props are passed similarly to HTML attributes.
+
+   ```jsx
+   // Function Component with Props
+   const Greeting = ({ name }) => {
+     return <h1>Hello, {name}!</h1>;
+   };
+
+   // Using the Greeting component with props
+   const App = () => {
+     return (
+       <div>
+         <Greeting name="Aytekin" /> {/* Pass 'Aytekin' as the name prop */}
+       </div>
+     );
+   };
+   ```
+
+#### **Key Differences Between JSX Elements and Components**
+
+- **JSX Elements:**
+   - Represent static content and are directly defined in JSX.
+   - Cannot contain logic or state.
+
+- **React Components:**
+   - Encapsulate JSX and can include logic, state, and lifecycle methods.
+   - Reusable and can accept props to customize their output.
+
+#### **Rendering the App Component**
+
+Let’s expand on rendering the App component that integrates multiple smaller components like Header, Main, and Footer.
+
+**Complete Example:**
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import aytekinImage from './images/aytekin.jpg'; // Import image for UserCard
+
+// Header Component
+const Header = () => (
+  <header>
+    <div className='header-wrapper'>
+      <h1>Welcome to React</h1>
+      <h2>Getting Started React</h2>
+      <h3>JavaScript Library</h3>
+      <p>Asabeneh Yetayeh</p>
+      <small>August 19, 2024</small>
+    </div>
+  </header>
+);
+
+// UserCard Component
+const UserCard = () => (
+  <div className='user-card'>
+    <img src={aytekinImage} alt='aytekin image' />
+    <h2>Aytekin Kaplan</h2>
+  </div>
+);
+
+// TechList Component
+const TechList = () => {
+  const techs = ['HTML', 'CSS', 'JavaScript']; // Array of technologies
+  const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>); // Format list items
+  return <ul>{techsFormatted}</ul>; // Render formatted list
+};
+
+// Main Component
+const Main = () => (
+  <main>
+    <div className='main-wrapper'>
+      <p>Prerequisite to get started with React:</p>
+      <TechList /> {/* Render TechList component */}
+      <UserCard /> {/* Render UserCard component */}
+    </div>
+  </main>
+);
+
+// Footer Component
+const Footer = () => (
+  <footer>
+    <div className='footer-wrapper'>
+      <p>Copyright 2024</p>
+    </div>
+  </footer>
+);
+
+// The App component, which acts as the container for other components
+const App = () => (
+  <div className='app'>
+    <Header />
+    <Main />
+    <Footer />
+  </div>
+);
+
+const rootElement = document.getElementById('root');
+// Render the App component using ReactDOM
+ReactDOM.render(<App />, rootElement);
+```
+
+### Injecting Dynamic Data into JSX
+
+You can pass dynamic data to JSX in React components using curly brackets `{}`. This data can be strings, numbers, booleans, arrays, or objects.
+
+**Example with Strings and Dynamic Content:**
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const welcome = 'Welcome to React';
+const title = 'Getting Started React';
+const subtitle = 'JavaScript Library';
+const firstName = 'Aytekin';
+const lastName = 'Kaplan';
+const date = 'August 19, 2024';
+
+// JSX element with dynamic content
+const Header = () => (
+  <header>
+    <div className='header-wrapper'>
+      <h1>{welcome}</h1> {/* Inject dynamic string */}
+      <h2>{title}</h2> {/* Inject dynamic string */}
+      <h3>{subtitle}</h3> {/* Inject dynamic string */}
+      <p>Instructor: {firstName} {lastName}</p> {/* Inject dynamic string */}
+      <small>Date: {date}</small> {/* Inject dynamic string */}
+    </div>
+  </header>
+);
+
+const rootElement = document.getElementById('root');
+// Render the Header component using ReactDOM
+ReactDOM.render(<Header />, rootElement);
+```
+
+**Further Enhancements:**
+
+1. **Dynamic Computation:**
+
+   ```jsx
+   const numOne = 3;
+   const numTwo = 2;
+
+   const result = (
+     <p>
+       {numOne} + {numTwo} = {numOne + numTwo} {/* Compute and inject result */}
+     </p>
+   );
+
+   const yearBorn = 571;
+   const currentYear = 2024;
+   const age = currentYear - yearBorn;
+
+   const personAge = (
+     <p>
+       {firstName} {lastName} is {age} years old {/* Compute and inject age */}
+     </p>
+   );
+   ```
+
+2. **UserCard Component with Dynamic Props:**
+
+   ```jsx
+   const UserCard = ({ image, name }) => (
+     <div className='user-card'>
+       <img src={image} alt='user image' />
+       <h2>{name}</h2> {/* Inject dynamic name */}
+     </div>
+   );
+   ```
+
+**Final App Component with Dynamic Content:**
+
+```jsx
+// Define dynamic data
+const copyRight = '2024';
+
+// App component integrating dynamic and static content
+const App = () => (
+  <div className='app'>
+    <Header />
+    <Main />
+    <Footer />
+  </div>
+);
+
+const rootElement = document.getElementById('root');
+// Render the App component using ReactDOM
+ReactDOM.render(<App />, rootElement);
+```
+
+### Creating Small Functional Components
+
+React encourages breaking down the UI into small, reusable components. For instance, a simple button component:
+
+**Button Component:**
+
+```jsx
+// Button Component with inline styles
+const buttonStyles = {
+  padding: '10px 20px',
+  background: 'rgb(0, 255, 0)', // Background color
+  border: 'none',
+  borderRadius: 5, // Rounded corners
+};
+
+const Button = () => <button style={buttonStyles}>Action</button>;
+```
+
+**Button Component with Props:**
+
+To make the Button component more flexible, pass props to customize its text:
+
+```jsx
+// Button Component with props
+const Button = ({ label }) => <button style={buttonStyles}>{label}</button>;
+
+// Usage with different labels
+const App = () => (
+  <div>
+    <Button label="Submit" />
+    <Button label="Cancel" />
+  </div>
+);
+```
+
+**Random Hexadecimal Color
+
+Generator:**
+
+Create a button that changes its background color randomly when clicked:
+
+```jsx
+import React, { useState } from 'react';
+
+const Button = ({ label }) => {
+  const [bgColor, setBgColor] = useState('#000');
+
+  const generateRandomColor = () => {
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    setBgColor(randomColor);
+  };
+
+  return (
+    <button 
+      style={{ backgroundColor: bgColor, padding: '10px 20px', border: 'none', borderRadius: 5 }} 
+      onClick={generateRandomColor}>
+      {label}
+    </button>
+  );
+};
+
+// Usage in App component
+const App = () => (
+  <div>
+    <Button label="Change Color" />
+  </div>
+);
+
+const rootElement = document.getElementById('root');
+ReactDOM.render(<App />, rootElement);
+```
+
+---
