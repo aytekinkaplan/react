@@ -149,6 +149,8 @@ These examples demonstrate how to use functions in different scenarios, each han
 ## JavaScript Class
 A class serves as a blueprint for objects, allowing us to create various instances. Moreover, we can generate child classes that inherit all the methods and properties from the parent class.
 
+### Extended `Parent` and `Child` Classes
+
 ```javascript
 // Parent class definition
 class Parent {
@@ -178,7 +180,7 @@ class Parent {
 }
 
 // Creating an instance of Parent
-const p1 = new Parent("Aytekin", "Kaplan", "Turkey", "FullStack Developer");
+const p1 = new Parent('Aytekin', 'Kaplan', 'Turkey', 'FullStack Developer');
 
 // Child class extending Parent
 class Child extends Parent {
@@ -190,7 +192,7 @@ class Child extends Parent {
   // Method to get skills as a string
   getSkills() {
     let len = this.skills.length;
-    return len > 0 ? this.skills.join(", ") : "No skills found";
+    return len > 0 ? this.skills.join(', ') : 'No skills found';
   }
 
   // Method to add new skills
@@ -201,7 +203,7 @@ class Child extends Parent {
 
   // Method to remove a skill
   removeSkill(skillToRemove) {
-    this.skills = this.skills.filter((skill) => skill !== skillToRemove);
+    this.skills = this.skills.filter(skill => skill !== skillToRemove);
     return `Skill removed. Current skills: ${this.getSkills()}`;
   }
 
@@ -212,37 +214,31 @@ class Child extends Parent {
 }
 
 // Skills array
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Node.js",
-  "MongoDB",
-  "Python",
-  "Django",
-];
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'MongoDB', 'Python', 'Django'];
 
 // Creating an instance of Child
 const child = new Child(
-  "Aytekin",
-  "Kaplan",
-  "Turkey",
-  "FullStack Developer",
+  'Aytekin',
+  'Kaplan',
+  'Turkey',
+  'FullStack Developer',
   skills
 );
 
 // Example usage
 console.log(child.getPersonInfo()); // Aytekin Kaplan, a FullStack Developer developer based in Turkey
 console.log(child.getSkills()); // HTML, CSS, JavaScript, React, Node.js, MongoDB, Python, Django
-console.log(child.addSkills(["TypeScript", "GraphQL"])); // Skills updated: HTML, CSS, JavaScript, React, Node.js, MongoDB, Python, Django, TypeScript, GraphQL
-console.log(child.removeSkill("Python")); // Skill removed. Current skills: HTML, CSS, JavaScript, React, Node.js, MongoDB, Django, TypeScript, GraphQL
-console.log(child.greet("John")); // Hello John, I am Aytekin Kaplan.
-
+console.log(child.addSkills(['TypeScript', 'GraphQL'])); // Skills updated: HTML, CSS, JavaScript, React, Node.js, MongoDB, Python, Django, TypeScript, GraphQL
+console.log(child.removeSkill('Python')); // Skill removed. Current skills: HTML, CSS, JavaScript, React, Node.js, MongoDB, Django, TypeScript, GraphQL
+console.log(child.greet('John')); // Hello John, I am Aytekin Kaplan.
 ```
 
-updateTitle Method: Allows updating the title of the person and provides feedback on the change.
-greet Method: Provides a personalized greeting message.
-addSkills Method: Adds new skills to the existing list.
-removeSkill Method: Removes a specified skill from the list.
+### Key Additions and Explanations:
+
+1. **`updateTitle` Method**: Allows updating the title of the person and provides feedback on the change.
+2. **`greet` Method**: Provides a personalized greeting message.
+3. **`addSkills` Method**: Adds new skills to the existing list.
+4. **`removeSkill` Method**: Removes a specified skill from the list.
+
+This extended example demonstrates how you can enhance the functionality of your classes by adding methods that provide more capabilities and interactions.
 
