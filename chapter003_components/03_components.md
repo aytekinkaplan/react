@@ -44,3 +44,106 @@ Aytekin Kaplan, a FullStack Developer developer based in Turkey.
 ```
 
 
+
+### 1. **Basic Greeting Function**
+This function takes the user's name and returns a greeting message.
+
+```javascript
+const greetUser = (firstName, lastName) => {
+  return `Hello, ${firstName} ${lastName}! Welcome to our platform.`;
+}
+
+console.log(greetUser('Aytekin', 'Kaplan'));
+```
+
+### 2. **Advanced User Information**
+This function takes the user's name, age, profession, and hobbies and returns a detailed user profile.
+
+```javascript
+const getUserProfile = (firstName, lastName, age, profession, hobbies) => {
+  return `${firstName} ${lastName} is a ${age}-year-old ${profession}. 
+  In their free time, they enjoy ${hobbies.join(', ')}.`;
+}
+
+const hobbies = ['reading', 'coding', 'traveling', 'photography'];
+console.log(getUserProfile('Aytekin', 'Kaplan', 30, 'FullStack Developer', hobbies));
+```
+
+### 3. **Shopping Cart Total Calculation**
+This function takes the prices of items in a shopping cart and calculates the total price.
+
+```javascript
+const calculateTotal = (prices) => {
+  return `The total price of your shopping cart is $${prices.reduce((total, price) => total + price, 0)}.`;
+}
+
+const cartPrices = [29.99, 15.99, 9.99, 49.99];
+console.log(calculateTotal(cartPrices));
+```
+
+### 4. **BMI (Body Mass Index) Calculation**
+This function takes the user's weight and height and calculates their Body Mass Index (BMI).
+
+```javascript
+const calculateBMI = (weight, height) => {
+  const bmi = (weight / (height * height)).toFixed(2);
+  return `Your BMI is ${bmi}.`;
+}
+
+console.log(calculateBMI(70, 1.75)); // 70 kg, 1.75 m height
+```
+
+### 5. **User Preferences**
+This function returns a profile based on the user's preferences.
+
+```javascript
+const getUserPreferences = (username, theme, language, notifications) => {
+  return `${username} prefers the ${theme} theme, uses the platform in ${language}, 
+  and has notifications turned ${notifications ? 'on' : 'off'}.`;
+}
+
+console.log(getUserPreferences('Aytekin', 'dark', 'English', true));
+```
+
+### 6. **Temperature Conversion**
+This function converts a Celsius value to Fahrenheit.
+
+```javascript
+const convertToFahrenheit = (celsius) => {
+  return `${celsius}°C is equal to ${(celsius * 9/5 + 32).toFixed(2)}°F.`;
+}
+
+console.log(convertToFahrenheit(25)); // 25°C = 77°F
+```
+
+### 7. **Password Strength Checker**
+This function takes the user's password and evaluates its strength.
+
+```javascript
+const checkPasswordStrength = (password) => {
+  if (password.length >= 8 && /[A-Z]/.test(password) && /[0-9]/.test(password)) {
+    return 'Your password is strong.';
+  } else {
+    return 'Your password could be stronger. Try including more characters, numbers, and capital letters.';
+  }
+}
+
+console.log(checkPasswordStrength('Passw0rd!'));
+```
+
+### 8. **To-Do List Manager**
+This function manages a task list and provides a function to add tasks.
+
+```javascript
+const addTask = (taskList, task) => {
+  taskList.push(task);
+  return `Task "${task}" added. You now have ${taskList.length} tasks.`;
+}
+
+let myTasks = ['Buy groceries', 'Finish project', 'Call mom'];
+console.log(addTask(myTasks, 'Go for a run'));
+```
+
+These examples demonstrate how to use functions in different scenarios, each handling various types of data to solve specific problems.
+
+
