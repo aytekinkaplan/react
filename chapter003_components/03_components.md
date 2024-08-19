@@ -265,5 +265,102 @@ In this example, `Greeting` is a functional component that takes `name` as a pro
 Functional components can also use hooks for managing state and side effects if needed. Let’s dive into a more advanced example with a hook.
 
 ---
+### 1. **Arrow Function with JSX**
 
+```jsx
+const Greeting = () => {
+  return <h1>Hello, World!</h1>;
+};
+```
+
+### 2. **Function Declaration**
+
+```jsx
+function UserProfile(props) {
+  return <div>User: {props.username}</div>;
+}
+```
+
+### 3. **Function Expression**
+
+```jsx
+const WelcomeMessage = function() {
+  return <p>Welcome to our website!</p>;
+};
+```
+
+### 4. **Arrow Function with Props Destructuring**
+
+```jsx
+const Welcome = ({ name }) => {
+  return <h2>Welcome, {name}!</h2>;
+};
+```
+
+### 5. **Function Declaration with Props Destructuring**
+
+```jsx
+function UserInfo({ age, city }) {
+  return <p>Age: {age}, City: {city}</p>;
+}
+```
+
+### 6. **Arrow Function Returning a Fragment**
+
+```jsx
+const List = () => (
+  <>
+    <h3>My List:</h3>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </>
+);
+```
+
+### 7. **Function Expression Returning a List**
+
+```jsx
+const ItemList = function({ items }) {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+};
+```
+
+### 8. **Arrow Function with Inline Style**
+
+```jsx
+const StyledDiv = () => {
+  const style = { color: 'blue', fontSize: '20px' };
+  return <div style={style}>Styled Component</div>;
+};
+```
+
+### 9. **Function Declaration with Event Handling**
+
+```jsx
+function ClickMe() {
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
+  return <button onClick={handleClick}>Click Me</button>;
+}
+```
+
+### 10. **Arrow Function with Conditional Rendering**
+
+```jsx
+const Status = ({ isOnline }) => {
+  return isOnline ? <span>Status: Online</span> : <span>Status: Offline</span>;
+};
+```
+
+These examples cover a range of common patterns for functional components in React, showcasing different ways to use JavaScript functions to define components.
 
