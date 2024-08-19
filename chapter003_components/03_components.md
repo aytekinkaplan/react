@@ -891,7 +891,7 @@ const Header = () => (
       <h1>Welcome to React</h1>
       <h2>Getting Started React</h2>
       <h3>JavaScript Library</h3>
-      <p>Asabeneh Yetayeh</p>
+      <p>Aytekin Kaplan</p>
       <small>August 19, 2024</small>
     </div>
   </header>
