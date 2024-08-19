@@ -17,3 +17,24 @@ In the following diagram, the header, main, and footer are components. Within th
 ![Components](./images/components.webp)
 
 Each colored section represents a different React component, including the header, main section, user card, text section, and footer. Each component is labeled to help you visualize how they fit together.
+
+Before diving into React components, let's take a moment to review functions and classes.
+
+## JavaScript function
+
+A JavaScript function can be defined as either a regular function or an arrow function. Although they are similar, there are subtle differences between the two.
+
+```javascript
+const getUserInfo = (firstName, lastName, country, title, skills, age, experienceYears, preferredLanguage) => {
+return `${firstName} ${lastName}, a ${title} developer based in ${country}. 
+  He is ${age} years old with ${experienceYears} years of experience. 
+  His main skills include ${skills.join(', ')} and his preferred programming language is ${preferredLanguage}.`;
+}
+
+
+// Functionu çağırmak için parametreleri geçelim:
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+console.log(
+getUserInfo('Aytekin', 'Kaplan', 'Turkey', 'FullStack Developer', skills, 30, 7, 'JavaScript')
+);
+```
