@@ -146,4 +146,98 @@ console.log(addTask(myTasks, 'Go for a run'));
 
 These examples demonstrate how to use functions in different scenarios, each handling various types of data to solve specific problems.
 
+## JavaScript Class
+A class serves as a blueprint for objects, allowing us to create various instances. Moreover, we can generate child classes that inherit all the methods and properties from the parent class.
+
+```javascript
+// Parent class definition
+class Parent {
+  constructor(firstName, lastName, country, title) {
+    // Bind parameters with the class instance using 'this' keyword
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.country = country;
+    this.title = title;
+  }
+
+  // Method to get person's information
+  getPersonInfo() {
+    return `${this.firstName} ${this.lastName}, a ${this.title} developer based in ${this.country}`;
+  }
+
+  // Method to update person's title
+  updateTitle(newTitle) {
+    this.title = newTitle;
+    return `Title updated to ${this.title}`;
+  }
+
+  // Method to greet someone
+  greet(person) {
+    return `Hello ${person}, I am ${this.firstName} ${this.lastName}.`;
+  }
+}
+
+// Creating an instance of Parent
+const p1 = new Parent("Aytekin", "Kaplan", "Turkey", "FullStack Developer");
+
+// Child class extending Parent
+class Child extends Parent {
+  constructor(firstName, lastName, country, title, skills) {
+    super(firstName, lastName, country, title);
+    this.skills = skills;
+  }
+
+  // Method to get skills as a string
+  getSkills() {
+    let len = this.skills.length;
+    return len > 0 ? this.skills.join(", ") : "No skills found";
+  }
+
+  // Method to add new skills
+  addSkills(newSkills) {
+    this.skills = [...this.skills, ...newSkills];
+    return `Skills updated: ${this.getSkills()}`;
+  }
+
+  // Method to remove a skill
+  removeSkill(skillToRemove) {
+    this.skills = this.skills.filter((skill) => skill !== skillToRemove);
+    return `Skill removed. Current skills: ${this.getSkills()}`;
+  }
+
+  // Method specific to Child class
+  childMethod() {
+    // Code for the child method
+  }
+}
+
+// Skills array
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "MongoDB",
+  "Python",
+  "Django",
+];
+
+// Creating an instance of Child
+const child = new Child(
+  "Aytekin",
+  "Kaplan",
+  "Turkey",
+  "FullStack Developer",
+  skills
+);
+
+// Example usage
+console.log(child.getPersonInfo()); // Aytekin Kaplan, a FullStack Developer developer based in Turkey
+console.log(child.getSkills()); // HTML, CSS, JavaScript, React, Node.js, MongoDB, Python, Django
+console.log(child.addSkills(["TypeScript", "GraphQL"])); // Skills updated: HTML, CSS, JavaScript, React, Node.js, MongoDB, Python, Django, TypeScript, GraphQL
+console.log(child.removeSkill("Python")); // Skill removed. Current skills: HTML, CSS, JavaScript, React, Node.js, MongoDB, Django, TypeScript, GraphQL
+console.log(child.greet("John")); // Hello John, I am Aytekin Kaplan.
+
+```
 
