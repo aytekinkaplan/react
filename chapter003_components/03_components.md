@@ -238,4 +238,36 @@ console.log(child.greet('John')); // Hello John, I am Aytekin Kaplan.
 3. **`addSkills` Method**: Adds new skills to the existing list.
 4. **`removeSkill` Method**: Removes a specified skill from the list.
 
+Since we’ve just touched on functions and classes, let’s put them into practice by creating a React component.
+
+## Creating React Component
+
+### Functional Component
+
+---
+
+## Building a React Component
+
+### Creating a Functional Component
+
+A functional component in React is a JavaScript function that returns a React element, representing a piece of the user interface. It’s the simplest way to create a component and is ideal for components that don’t require state or lifecycle methods. Functional components are concise and easier to test and maintain.
+
+Here’s a basic example:
+
+```javascript
+import React from 'react';
+
+const Greeting = ({ name }) => {
+  return <h1>Hello, {name}!</h1>;
+};
+
+export default Greeting;
+```
+
+In this example, `Greeting` is a functional component that takes `name` as a prop and displays a greeting message.
+
+Functional components can also use hooks for managing state and side effects if needed. Let’s dive into a more advanced example with a hook.
+
+---
+
 
