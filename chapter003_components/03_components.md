@@ -233,12 +233,9 @@ console.log(child.removeSkill('Python')); // Skill removed. Current skills: HTML
 console.log(child.greet('John')); // Hello John, I am Aytekin Kaplan.
 ```
 
-### Key Additions and Explanations:
-
 1. **`updateTitle` Method**: Allows updating the title of the person and provides feedback on the change.
 2. **`greet` Method**: Provides a personalized greeting message.
 3. **`addSkills` Method**: Adds new skills to the existing list.
 4. **`removeSkill` Method**: Removes a specified skill from the list.
 
-This extended example demonstrates how you can enhance the functionality of your classes by adding methods that provide more capabilities and interactions.
 
