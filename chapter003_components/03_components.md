@@ -364,3 +364,143 @@ const Status = ({ isOnline }) => {
 
 These examples cover a range of common patterns for functional components in React, showcasing different ways to use JavaScript functions to define components.
 
+### Comprehensive React Component Example
+
+```jsx
+// Defining styles for the header
+const headerStyles = {
+  backgroundColor: '#282c34',
+  color: 'white',
+  padding: '20px',
+  textAlign: 'center',
+};
+
+// JSX element for the header
+const headerElement = (
+  <header style={headerStyles}>
+    <div className='header-wrapper'>
+      <h1>Welcome to React</h1>
+      <h2>Getting Started with React</h2>
+      <h3>JavaScript Library for Building User Interfaces</h3>
+      <p>Aytekin Kaplan</p>
+      <small>August 19, 2024</small>
+    </div>
+  </header>
+);
+
+// React component using a variable for JSX
+const HeaderWithVariable = () => {
+  // Returning the JSX element defined earlier
+  return headerElement;
+};
+
+// React component directly returning JSX
+const HeaderDirectReturn = () => {
+  return (
+    <header style={headerStyles}>
+      <div className='header-wrapper'>
+        <h1>Welcome to React</h1>
+        <h2>Getting Started with React</h2>
+        <h3>JavaScript Library for Building User Interfaces</h3>
+        <p>Aytekin Kaplan</p>
+        <small>August 19, 2024</small>
+      </div>
+    </header>
+  );
+};
+
+// React component with implicit return for simplicity
+const HeaderImplicitReturn = () => (
+  <header style={headerStyles}>
+    <div className='header-wrapper'>
+      <h1>Welcome to React</h1>
+      <h2>Getting Started with React</h2>
+      <h3>JavaScript Library for Building User Interfaces</h3>
+      <p>Aytekin Kaplan</p>
+      <small>August 19, 2024</small>
+    </div>
+  </header>
+);
+
+// Exporting all components to use in other files
+export { HeaderWithVariable, HeaderDirectReturn, HeaderImplicitReturn };
+```
+
+### Detailed Explanations:
+
+1. **Defining Styles**:
+   ```jsx
+   const headerStyles = {
+     backgroundColor: '#282c34',
+     color: 'white',
+     padding: '20px',
+     textAlign: 'center',
+   };
+   ```
+    - This object defines CSS styles for the header element. Styles include a background color, text color, padding, and text alignment.
+
+2. **JSX Element**:
+   ```jsx
+   const headerElement = (
+     <header style={headerStyles}>
+       <div className='header-wrapper'>
+         <h1>Welcome to React</h1>
+         <h2>Getting Started with React</h2>
+         <h3>JavaScript Library for Building User Interfaces</h3>
+         <p>Aytekin Kaplan</p>
+         <small>August 19, 2024</small>
+       </div>
+     </header>
+   );
+   ```
+    - This JSX element represents the structure of the header. It uses inline styles from the `headerStyles` object and contains various headings and text.
+
+3. **React Component Using a Variable for JSX**:
+   ```jsx
+   const HeaderWithVariable = () => {
+     return headerElement;
+   };
+   ```
+    - This component returns the JSX element defined earlier. It demonstrates how to use a variable to store JSX and return it within a functional component.
+
+4. **React Component Directly Returning JSX**:
+   ```jsx
+   const HeaderDirectReturn = () => {
+     return (
+       <header style={headerStyles}>
+         <div className='header-wrapper'>
+           <h1>Welcome to React</h1>
+           <h2>Getting Started with React</h2>
+           <h3>JavaScript Library for Building User Interfaces</h3>
+           <p>Aytekin Kaplan</p>
+           <small>August 19, 2024</small>
+         </div>
+       </header>
+     );
+   };
+   ```
+    - This component directly returns JSX without using a separate variable. This is a straightforward way to define a component when the JSX structure is simple.
+
+5. **React Component with Implicit Return**:
+   ```jsx
+   const HeaderImplicitReturn = () => (
+     <header style={headerStyles}>
+       <div className='header-wrapper'>
+         <h1>Welcome to React</h1>
+         <h2>Getting Started with React</h2>
+         <h3>JavaScript Library for Building User Interfaces</h3>
+         <p>Aytekin Kaplan</p>
+         <small>August 19, 2024</small>
+       </div>
+     </header>
+   );
+   ```
+    - This component uses an implicit return with arrow functions. It is a concise way to return JSX when no additional logic is needed.
+
+6. **Exporting Components**:
+   ```jsx
+   export { HeaderWithVariable, HeaderDirectReturn, HeaderImplicitReturn };
+   ```
+    - This line exports the components so they can be imported and used in other files.
+
+These examples showcase different styles of defining and returning React components, demonstrating flexibility and various approaches in React development.
