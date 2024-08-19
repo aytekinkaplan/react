@@ -9,3 +9,9 @@ Traditionally, components were categorized as:
 However, these distinctions are less relevant in the latest version of React, but understanding the old definitions is still valuable.
 
 In React, components return JSX and must start with an uppercase letter. If a component's name consists of two words, it should follow CamelCase.
+
+In the previous section, we mentioned that a website or application is composed of various elements like buttons, forms, text, media objects, headers, sections, articles, and footers. If we have a highly valuable button design, we can reuse it throughout the application instead of recreating it each time. The same applies to input fields, forms, headers, and footers. This is where the power of components comes in.
+
+In the following diagram, the header, main, and footer are components. Within the main section, there's also a user card component and a text section component. Each color in the diagram represents a different component, and there are five components in total.
+
+![Components](./images/components.webp)
