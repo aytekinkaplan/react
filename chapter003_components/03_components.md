@@ -15,3 +15,5 @@ In the previous section, we mentioned that a website or application is composed 
 In the following diagram, the header, main, and footer are components. Within the main section, there's also a user card component and a text section component. Each color in the diagram represents a different component, and there are five components in total.
 
 ![Components](./images/components.webp)
+
+Each colored section represents a different React component, including the header, main section, user card, text section, and footer. Each component is labeled to help you visualize how they fit together.
