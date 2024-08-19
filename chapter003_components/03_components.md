@@ -30,11 +30,17 @@ return `${firstName} ${lastName}, a ${title} developer based in ${country}.
   He is ${age} years old with ${experienceYears} years of experience. 
   His main skills include ${skills.join(', ')} and his preferred programming language is ${preferredLanguage}.`;
 }
-
-
-// Functionu çağırmak için parametreleri geçelim:
+// Let's pass the parameters to call the function:
 const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
 console.log(
 getUserInfo('Aytekin', 'Kaplan', 'Turkey', 'FullStack Developer', skills, 30, 7, 'JavaScript')
 );
 ```
+```shell
+$ node jstest.js
+Aytekin Kaplan, a FullStack Developer developer based in Turkey.
+  He is 30 years old with 7 years of experience.
+  His main skills include HTML, CSS, JavaScript, React, Node.js and his preferred programming language is JavaScript.
+```
+
+
