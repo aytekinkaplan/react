@@ -240,10 +240,6 @@ console.log(child.greet('John')); // Hello John, I am Aytekin Kaplan.
 
 Since we’ve just touched on functions and classes, let’s put them into practice by creating a React component.
 
-## Creating React Component
-
-### Functional Component
-
 ---
 
 ## Building a React Component
