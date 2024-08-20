@@ -475,3 +475,478 @@ The `props` object in the console will look like this:
   listItems: ["Item 1", "Item 2", "Item 3"]
 }
 ```
+
+```javascript
+import React from "react";
+import ReactDOM from "react-dom";
+
+// Header Component
+const Header = (props) => (
+  <header>
+    <div className="header-wrapper">
+      <h1>{props.welcome}</h1> // Displays the welcome prop value
+      <h2>{props.title}</h2> // Displays the title prop value
+      <h3>{props.subtitle}</h3> // Displays the subtitle prop value
+      <p>
+        {props.firstName} {props.lastName} // Displays the concatenated
+        firstName and lastName prop values
+      </p>
+      <small>{props.date}</small> // Displays the date prop value
+    </div>
+  </header>
+);
+
+// The App component, which serves as the parent or container component
+// Functional Component
+const App = () => {
+  // Define variables for the prop values
+  const welcome = "Welcome to 30 Days Of React"; // Welcome message
+  const title = "Getting Started React"; // Title for the content
+  const subtitle = "JavaScript Library"; // Subtitle for the content
+  const firstName = "Asabeneh"; // Author's first name
+  const lastName = "Yetayeh"; // Author's last name
+  const date = "Oct 4, 2020"; // Date of publication
+
+  return (
+    <div className="app">
+      {/* Pass the variables as props to the Header component */}
+      <Header
+        welcome={welcome}
+        title={title}
+        subtitle={subtitle}
+        firstName={firstName}
+        lastName={lastName}
+        date={date}
+      />
+    </div>
+  );
+};
+
+const rootElement = document.getElementById("root"); // Select the root DOM element for rendering
+ReactDOM.render(<App />, rootElement); // Render the App component into the root element
+```
+
+### Detailed Explanation:
+
+- **`Header` Component**:
+
+  - Receives `props` from its parent and displays them within various HTML elements.
+  - `props` includes `welcome`, `title`, `subtitle`, `firstName`, `lastName`, and `date`.
+
+- **`App` Component**:
+
+  - Defines several variables (`welcome`, `title`, `subtitle`, `firstName`, `lastName`, `date`) to store the data.
+  - Passes these variables as props to the `Header` component. This allows for more flexible and dynamic use of data compared to static values.
+
+- **Rendering**:
+  - The `App` component is rendered into the DOM element with the ID `root`, making it visible on the webpage.
+
+Using variables for props allows for easier management and updates of data, especially when you need to apply logic or reuse values.
+
+### Number props type
+
+### Here’s a brief overview and a summary of each example:
+
+### 1. Number Props
+
+In the `Age` and `Weight` components, you pass numerical data as props and use it to render dynamic content.
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const Age = (props) => <div>The person is {props.age} years old.</div>;
+const Weight = (props) => (
+  <p>The weight of the object on earth is {props.weight} N.</p>
+);
+
+const App = () => {
+  let currentYear = 2024;
+  let birthYear = 571;
+  const age = currentYear - birthYear;
+  const gravity = 9.81;
+  const mass = 75;
+
+  return (
+    <div className="app">
+      <Age age={age} />
+      <Weight weight={gravity * mass} />
+    </div>
+  );
+};
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+### 2. Boolean Props
+
+The `Status` component uses a boolean prop to determine the text displayed.
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const Status = (props) => {
+  let status = props.status ? "Old enough to drive" : "Too young for driving";
+  return <p>{status}</p>;
+};
+
+const App = () => {
+  let currentYear = 2024;
+  let birthYear = 2015;
+  const age = currentYear - birthYear;
+  let status = age >= 18;
+
+  return (
+    <div className="app">
+      <Status status={status} />
+    </div>
+  );
+};
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+### 3. Array Props
+
+The `Skills` component receives an array and renders a list. The array is modified with the `map` method to create `<li>` elements.
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const Skills = (props) => {
+  const skillList = props.skills.map((skill, index) => (
+    <li key={index}>{skill}</li>
+  ));
+  return <ul>{skillList}</ul>;
+};
+
+const App = () => (
+  <div className="app">
+    <Skills skills={["HTML", "CSS", "JavaScript"]} />
+  </div>
+);
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+### 4. Object Props
+
+The `Header` component receives an object with nested properties as a prop.
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const showDate = (time) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const month = months[time.getMonth()].slice(0, 3);
+  const year = time.getFullYear();
+  const date = time.getDate();
+  return ` ${month} ${date}, ${year}`;
+};
+
+const Header = ({
+  data: {
+    welcome,
+    title,
+    subtitle,
+    author: { firstName, lastName },
+    date,
+  },
+}) => (
+  <header>
+    <div className="header-wrapper">
+      <h1>{welcome}</h1>
+      <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      <p>
+        {firstName} {lastName}
+      </p>
+      <small>{showDate(date)}</small>
+    </div>
+  </header>
+);
+
+const App = () => {
+  const data = {
+    welcome: "Welcome to React",
+    title: "Getting Started React",
+    subtitle: "JavaScript Library",
+    author: {
+      firstName: "Aytekin",
+      lastName: "Kaplan",
+    },
+    date: new Date(),
+  };
+
+  return (
+    <div className="app">
+      <Header data={data} />
+    </div>
+  );
+};
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+### 5. Function Props
+
+The `Button` component receives a function as a prop, which is called when the button is clicked.
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const Button = (props) => <button onClick={props.onClick}>{props.text}</button>;
+
+const App = () => {
+  const greetPeople = () => {
+    alert("Welcome to React Challenge, 2024");
+  };
+
+  return (
+    <div className="app">
+      <Button text="Greet People" onClick={greetPeople} />
+      <Button text="Show Time" onClick={() => alert(new Date())} />
+    </div>
+  );
+};
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+### 6. Destructuring Props
+
+You can destructure props to make code cleaner and more readable. Here’s an example with different destructuring methods.
+
+**Step by Step Destructuring:**
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const showDate = (time) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const month = months[time.getMonth()].slice(0, 3);
+  const year = time.getFullYear();
+  const date = time.getDate();
+  return ` ${month} ${date}, ${year}`;
+};
+
+const Header = (props) => {
+  const data = props.data;
+  const { welcome, title, subtitle, author, date } = data;
+  const { firstName, lastName } = author;
+  return (
+    <header>
+      <div className="header-wrapper">
+        <h1>{welcome}</h1>
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
+        <p>
+          {firstName} {lastName}
+        </p>
+        <small>{showDate(date)}</small>
+      </div>
+    </header>
+  );
+};
+
+const App = () => {
+  const data = {
+    welcome: "Welcome to React",
+    title: "Getting Started React",
+    subtitle: "JavaScript Library",
+    author: {
+      firstName: "Aytekin",
+      lastName: "Kaplan",
+    },
+    date: new Date(),
+  };
+
+  return (
+    <div className="app">
+      <Header data={data} />
+    </div>
+  );
+};
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+**Destructuring in One Line:**
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const showDate = (time) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const month = months[time.getMonth()].slice(0, 3);
+  const year = time.getFullYear();
+  const date = time.getDate();
+  return ` ${month} ${date}, ${year}`;
+};
+
+const Header = (props) => {
+  const {
+    data: {
+      welcome,
+      title,
+      subtitle,
+      author: { firstName, lastName },
+      date,
+    },
+  } = props;
+
+  return (
+    <header>
+      <div className="header-wrapper">
+        <h1>{welcome}</h1>
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
+        <p>
+          {firstName} {lastName}
+        </p>
+        <small>{showDate(date)}</small>
+      </div>
+    </header>
+  );
+};
+
+const App = () => {
+  const data = {
+    welcome: "Welcome to React",
+    title: "Getting Started React",
+    subtitle: "JavaScript Library",
+    author: {
+      firstName: "Aytekin",
+      lastName: "Kaplan",
+    },
+    date: new Date(),
+  };
+
+  return (
+    <div className="app">
+      <Header data={data} />
+    </div>
+  );
+};
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+**Destructuring Inside the Parentheses:**
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const showDate = (time) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const month = months[time.getMonth()].slice(0, 3);
+  const year = time.getFullYear();
+  const date = time.getDate();
+  return ` ${month} ${date}, ${year}`;
+};
+
+const Header = ({
+  data: {
+    welcome,
+    title,
+    subtitle,
+    author: { firstName, lastName },
+    date,
+  },
+}) => (
+  <header>
+    <div className="header-wrapper">
+      <h1>{welcome}</h1>
+      <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      <p>
+        {firstName} {lastName}
+      </p>
+      <small>{showDate(date)}</small>
+    </div>
+  </header>
+);
+
+const App = () => {
+  const data = {
+    welcome: "Welcome to 30 Days Of React",
+    title: "Getting Started React",
+    subtitle: "JavaScript Library",
+    author: {
+      firstName: "Aytekin",
+      lastName: "Kaplan",
+    },
+    date: new Date(),
+  };
+
+  return (
+    <div className="app">
+      <Header data={data} />
+    </div>
+  );
+};
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+
+Feel free to let me know if you need further details or explanations on any of these examples!
