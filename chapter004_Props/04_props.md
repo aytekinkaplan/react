@@ -593,7 +593,7 @@ const Status = (props) => {
 
 const App = () => {
   let currentYear = 2024;
-  let birthYear = 2015;
+  let birthYear = 571;
   const age = currentYear - birthYear;
   let status = age >= 18;
 
@@ -929,7 +929,7 @@ const Header = ({
 
 const App = () => {
   const data = {
-    welcome: "Welcome to 30 Days Of React",
+    welcome: "Welcome to React",
     title: "Getting Started React",
     subtitle: "JavaScript Library",
     author: {
